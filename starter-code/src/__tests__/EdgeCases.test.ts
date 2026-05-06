@@ -48,10 +48,7 @@ function assertCommonInvariants(file: string, sheet: ReviewSheet): void {
   const computedHighRisk = sheet.billing_actions.filter((action) => action.risk_level === 'high').length;
   expect(sheet.high_risk_actions).toBe(computedHighRisk);
 
-  const computedImpact = sheet.billing_actions.reduce(
-    (sum, action) => sum + Math.abs(action.amount_in_cents || 0),
-    0
-  );
+  const computedImpact = sheet.billing_actions.reduce((sum, action) => sum + (action.amount_in_cents || 0), 0);
   expect(sheet.estimated_total_impact).toBe(computedImpact);
 
   const shouldRequireReview =

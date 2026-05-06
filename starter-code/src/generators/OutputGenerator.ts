@@ -7,10 +7,7 @@ export class OutputGenerator {
     validationErrors: ValidationError[] = []
   ): ReviewSheet {
     const highRiskActions = billingActions.filter((action) => action.risk_level === 'high').length;
-    const estimatedTotalImpact = billingActions.reduce(
-      (sum, action) => sum + Math.abs(action.amount_in_cents || 0),
-      0
-    );
+    const estimatedTotalImpact = billingActions.reduce((sum, action) => sum + (action.amount_in_cents || 0), 0);
     const warnings = this.buildWarnings(opportunity, billingActions, validationErrors);
     const manualReviewRequired =
       warnings.length > 0 || billingActions.some((action) => action.requires_review);
@@ -52,6 +49,19 @@ export class OutputGenerator {
 
     if (opportunity.amount > 100000) {
       warnings.add('High-value transaction exceeds $100,000');
+    }
+
+    if (opportunity.outstanding_invoices?.has_outstanding) {
+      warnings.add('Account has outstanding invoices; requires finance review before provisioning');
+    }
+
+    if (opportunity.close_date && opportunity.contract_start_date && opportunity.contract_start_date < opportunity.close_date) {
+      warnings.add('Backdated contract start detected');
+    }
+
+    const daysSinceExpiration = opportunity.previous_contract?.days_since_expiration;
+    if (typeof daysSinceExpiration === 'number' && daysSinceExpiration > 30) {
+      warnings.add(`Renewal has ${daysSinceExpiration} days service gap`);
     }
 
     for (const action of actions) {
