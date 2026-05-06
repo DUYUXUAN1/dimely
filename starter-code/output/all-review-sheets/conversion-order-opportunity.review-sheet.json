@@ -1,0 +1,101 @@
+{
+  "opportunity_id": "opp_004",
+  "opportunity_name": "Delta Innovations - Self-Service to Direct Sales",
+  "account_name": "Delta Innovations",
+  "total_actions": 6,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 8385235,
+  "billing_actions": [
+    {
+      "type": "cancel_subscription",
+      "description": "Cancel self-service subscription growth_plan",
+      "details": {
+        "subscription_uuid": "sub_delta_ss_001",
+        "cancel_at": "2024-10-31",
+        "refund_type": "prorated"
+      },
+      "effective_date": "2024-10-31",
+      "requires_review": false,
+      "risk_level": "medium"
+    },
+    {
+      "type": "apply_credit",
+      "description": "Apply credit for unused self-service time",
+      "details": {
+        "credit_type": "proration_refund",
+        "reason": "Self-service conversion credit",
+        "original_subscription": "sub_delta_ss_001"
+      },
+      "amount_in_cents": -14765,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "update_account",
+      "description": "Switch account billing to invoice terms",
+      "details": {
+        "collection_method": "manual",
+        "net_terms": 30,
+        "billing_info_update": "Move from card auto-charge to invoice billing"
+      },
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Professional Plan",
+      "details": {
+        "plan_code": "PRO_PLAN",
+        "unit_amount_in_cents": 400000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 4800000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Premium Support",
+      "details": {
+        "plan_code": "PREMIUM_SUPPORT",
+        "unit_amount_in_cents": 150000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1800000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Advanced Analytics",
+      "details": {
+        "plan_code": "ADV_ANALYTICS",
+        "unit_amount_in_cents": 150000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1800000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "Conversion order: 6 billing actions totaling $83,852.35",
+  "warnings": [
+    "Validation issue (billing_transition.refund_items.0.refund_amount): Refund amount mismatch: expected 152.57, got 147.65"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.695Z"
+}

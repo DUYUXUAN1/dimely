@@ -1,0 +1,94 @@
+{
+  "opportunity_id": "opp_edge_enterprise",
+  "opportunity_name": "MegaCorp - Enterprise Platform Deal",
+  "account_name": "MegaCorp Global Industries",
+  "total_actions": 5,
+  "high_risk_actions": 5,
+  "estimated_total_impact": 250000000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for MegaCorp Global Industries",
+      "details": {
+        "account_code": "megacorp_global_industries",
+        "email": "v.sterling@megacorp.com",
+        "company_name": "MegaCorp Global Industries",
+        "billing_address": {
+          "address1": "One MegaCorp Plaza",
+          "address2": "Executive Floor",
+          "city": "New York",
+          "state": "NY",
+          "zip": "10001",
+          "country": "US"
+        }
+      },
+      "requires_review": true,
+      "risk_level": "high"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Enterprise Platform License",
+      "details": {
+        "plan_code": "ENT_PLATFORM",
+        "unit_amount_in_cents": 50000000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 150000000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Premium Support Package",
+      "details": {
+        "plan_code": "PREM_SUPPORT",
+        "unit_amount_in_cents": 15000000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 45000000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Implementation Services",
+      "details": {
+        "charge_code": "IMPL_ENT",
+        "description": "Full enterprise implementation with dedicated team"
+      },
+      "amount_in_cents": 35000000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Training Program",
+      "details": {
+        "charge_code": "TRAINING_ENT",
+        "description": "500 user training sessions"
+      },
+      "amount_in_cents": 20000000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high"
+    }
+  ],
+  "summary": "New business order: 5 billing actions totaling $2,500,000.00",
+  "warnings": [
+    "High-value transaction exceeds $100,000",
+    "High-risk action: create_account",
+    "High-risk action: create_subscription",
+    "High-risk action: charge_one_time"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.707Z"
+}

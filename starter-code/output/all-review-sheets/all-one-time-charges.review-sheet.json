@@ -1,0 +1,80 @@
+{
+  "opportunity_id": "opp_edge_onetime",
+  "opportunity_name": "OneTimeOnly - Services Only Contract",
+  "account_name": "OneTimeOnly Inc",
+  "total_actions": 5,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 7500000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for OneTimeOnly Inc",
+      "details": {
+        "account_code": "onetimeonly_inc",
+        "email": "otto@onetimeonly.com",
+        "company_name": "OneTimeOnly Inc",
+        "billing_address": {
+          "address1": "1 Single Lane",
+          "city": "Dallas",
+          "state": "TX",
+          "zip": "75201",
+          "country": "US"
+        }
+      },
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for System Assessment",
+      "details": {
+        "charge_code": "ASSESS",
+        "description": "Comprehensive system assessment and audit"
+      },
+      "amount_in_cents": 1500000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Architecture Design",
+      "details": {
+        "charge_code": "ARCH_DESIGN",
+        "description": "Solution architecture and design documentation"
+      },
+      "amount_in_cents": 2500000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Implementation Services",
+      "details": {
+        "charge_code": "IMPL_SVC",
+        "description": "100 hours of implementation services"
+      },
+      "amount_in_cents": 2500000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Training",
+      "details": {
+        "charge_code": "TRAINING",
+        "description": "20 training sessions for staff"
+      },
+      "amount_in_cents": 1000000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 5 billing actions totaling $75,000.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.699Z"
+}

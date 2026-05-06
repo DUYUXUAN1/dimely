@@ -1,0 +1,32 @@
+{
+  "opportunity_id": "opp_edge_lategap",
+  "opportunity_name": "LateRenewal - 45 Day Service Gap",
+  "account_name": "LateRenewal Inc",
+  "total_actions": 1,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 6000000,
+  "billing_actions": [
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Professional Plan",
+      "details": {
+        "plan_code": "PRO_PLAN",
+        "unit_amount_in_cents": 500000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-02-15"
+      },
+      "amount_in_cents": 6000000,
+      "effective_date": "2025-02-15",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 1 billing actions totaling $60,000.00",
+  "warnings": [
+    "Renewal has 46 days service gap"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.714Z"
+}

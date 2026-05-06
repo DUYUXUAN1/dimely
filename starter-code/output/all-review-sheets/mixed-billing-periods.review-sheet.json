@@ -1,0 +1,104 @@
+{
+  "opportunity_id": "opp_edge_mixed",
+  "opportunity_name": "Complex Billing Corp - Mixed Period Subscription",
+  "account_name": "Complex Billing Corp",
+  "total_actions": 6,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 8400000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for Complex Billing Corp",
+      "details": {
+        "account_code": "complex_billing_corp",
+        "email": "billy@complexbilling.com",
+        "company_name": "Complex Billing Corp",
+        "billing_address": {
+          "address1": "777 Invoice Avenue",
+          "city": "Seattle",
+          "state": "WA",
+          "zip": "98101",
+          "country": "US"
+        }
+      },
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Core Platform",
+      "details": {
+        "plan_code": "CORE_MONTHLY",
+        "unit_amount_in_cents": 200000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 2400000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create quarterly subscription for Quarterly Reports Package",
+      "details": {
+        "plan_code": "REPORTS_QUARTERLY",
+        "unit_amount_in_cents": 600000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 2400000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Annual Support Contract",
+      "details": {
+        "plan_code": "SUPPORT_ANNUAL",
+        "unit_amount_in_cents": 1800000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1800000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Onboarding Fee",
+      "details": {
+        "charge_code": "ONBOARD_FEE",
+        "description": "One-time onboarding and setup"
+      },
+      "amount_in_cents": 800000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Training Sessions",
+      "details": {
+        "charge_code": "TRAINING",
+        "description": "20 training sessions at $500 each"
+      },
+      "amount_in_cents": 1000000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 6 billing actions totaling $84,000.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.710Z"
+}

@@ -1,0 +1,188 @@
+{
+  "opportunity_id": "opp_edge_multiyear",
+  "opportunity_name": "LongTerm Partners - 5 Year Strategic Agreement",
+  "account_name": "LongTerm Partners Ltd",
+  "total_actions": 7,
+  "high_risk_actions": 7,
+  "estimated_total_impact": 300000000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for LongTerm Partners Ltd",
+      "details": {
+        "account_code": "longterm_partners_ltd",
+        "email": "patricia@longtermpartners.com",
+        "company_name": "LongTerm Partners Ltd",
+        "billing_address": {
+          "address1": "500 Commitment Drive",
+          "city": "Chicago",
+          "state": "IL",
+          "zip": "60601",
+          "country": "US"
+        }
+      },
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Line item li_my_001 has pricing math mismatch",
+        "Line item li_my_002 has pricing math mismatch",
+        "Line item li_my_003 has pricing math mismatch",
+        "Line item li_my_004 has pricing math mismatch",
+        "Line item li_my_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Platform License - Year 1",
+      "details": {
+        "plan_code": "PLATFORM_Y1",
+        "unit_amount_in_cents": 50000000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 50000000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Line item li_my_001 has pricing math mismatch",
+        "Line item li_my_002 has pricing math mismatch",
+        "Line item li_my_003 has pricing math mismatch",
+        "Line item li_my_004 has pricing math mismatch",
+        "Line item li_my_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Platform License - Year 2",
+      "details": {
+        "plan_code": "PLATFORM_Y2",
+        "unit_amount_in_cents": 52500000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 52500000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Line item li_my_001 has pricing math mismatch",
+        "Line item li_my_002 has pricing math mismatch",
+        "Line item li_my_003 has pricing math mismatch",
+        "Line item li_my_004 has pricing math mismatch",
+        "Line item li_my_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Platform License - Year 3",
+      "details": {
+        "plan_code": "PLATFORM_Y3",
+        "unit_amount_in_cents": 55125000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 55125000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Line item li_my_001 has pricing math mismatch",
+        "Line item li_my_002 has pricing math mismatch",
+        "Line item li_my_003 has pricing math mismatch",
+        "Line item li_my_004 has pricing math mismatch",
+        "Line item li_my_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Platform License - Year 4",
+      "details": {
+        "plan_code": "PLATFORM_Y4",
+        "unit_amount_in_cents": 57881250,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 57881250,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Line item li_my_001 has pricing math mismatch",
+        "Line item li_my_002 has pricing math mismatch",
+        "Line item li_my_003 has pricing math mismatch",
+        "Line item li_my_004 has pricing math mismatch",
+        "Line item li_my_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Platform License - Year 5",
+      "details": {
+        "plan_code": "PLATFORM_Y5",
+        "unit_amount_in_cents": 60775313,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 60775313,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Line item li_my_001 has pricing math mismatch",
+        "Line item li_my_002 has pricing math mismatch",
+        "Line item li_my_003 has pricing math mismatch",
+        "Line item li_my_004 has pricing math mismatch",
+        "Line item li_my_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Initial Setup",
+      "details": {
+        "charge_code": "SETUP_STRAT",
+        "description": "Strategic implementation and setup"
+      },
+      "amount_in_cents": 23718437,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Line item li_my_001 has pricing math mismatch",
+        "Line item li_my_002 has pricing math mismatch",
+        "Line item li_my_003 has pricing math mismatch",
+        "Line item li_my_004 has pricing math mismatch",
+        "Line item li_my_005 has pricing math mismatch"
+      ]
+    }
+  ],
+  "summary": "New business order: 7 billing actions totaling $3,000,000.00",
+  "warnings": [
+    "High-value transaction exceeds $100,000",
+    "High-risk action: create_account",
+    "Line item li_my_001 has pricing math mismatch",
+    "Line item li_my_002 has pricing math mismatch",
+    "Line item li_my_003 has pricing math mismatch",
+    "Line item li_my_004 has pricing math mismatch",
+    "Line item li_my_005 has pricing math mismatch",
+    "High-risk action: create_subscription",
+    "High-risk action: charge_one_time",
+    "Validation issue (line_items.li_my_001.total_price): Line item math error: expected 2500000.00, got 500000",
+    "Validation issue (line_items.li_my_002.total_price): Line item math error: expected 2625000.00, got 525000",
+    "Validation issue (line_items.li_my_003.total_price): Line item math error: expected 2756250.00, got 551250",
+    "Validation issue (line_items.li_my_004.total_price): Line item math error: expected 2894062.50, got 578812.5",
+    "Validation issue (line_items.li_my_005.total_price): Line item math error: expected 3038765.65, got 607753.13"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.711Z"
+}

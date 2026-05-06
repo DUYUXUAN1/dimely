@@ -1,0 +1,80 @@
+{
+  "opportunity_id": "opp_edge_duplicate",
+  "opportunity_name": "DuplicateTest - Same Product Code Scenario",
+  "account_name": "DuplicateTest Corp",
+  "total_actions": 4,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 3600000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for DuplicateTest Corp",
+      "details": {
+        "account_code": "duplicatetest_corp",
+        "email": "dupey@duplicatetest.com",
+        "company_name": "DuplicateTest Corp",
+        "billing_address": {
+          "address1": "123 Same Street",
+          "city": "Twin Cities",
+          "state": "MN",
+          "zip": "55101",
+          "country": "US"
+        }
+      },
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for User Licenses - Team A",
+      "details": {
+        "plan_code": "USER_LICENSE",
+        "unit_amount_in_cents": 2000,
+        "quantity": 50,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1200000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for User Licenses - Team B",
+      "details": {
+        "plan_code": "USER_LICENSE",
+        "unit_amount_in_cents": 2000,
+        "quantity": 75,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1800000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for User Licenses - Team C",
+      "details": {
+        "plan_code": "USER_LICENSE",
+        "unit_amount_in_cents": 2000,
+        "quantity": 25,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 600000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 4 billing actions totaling $36,000.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.703Z"
+}

@@ -1,0 +1,61 @@
+{
+  "opportunity_id": "opp_edge_special",
+  "opportunity_name": "O'Reilly & Associates — «Enterprise» License [2024–2025]",
+  "account_name": "O'Reilly & Associates (UK) Ltd. — División Española",
+  "total_actions": 3,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 5000000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for O'Reilly & Associates (UK) Ltd. — División Española",
+      "details": {
+        "account_code": "o_reilly_associates_uk_ltd_divisi_n_espa_ola",
+        "email": "francois-marie.obrien-garcia@oreilly-associates.co.uk",
+        "company_name": "O'Reilly & Associates (UK) Ltd.",
+        "billing_address": {
+          "address1": "123 King's Road — Building «A»",
+          "address2": "Floor 3½, Suite 42",
+          "city": "London",
+          "state": "Greater London",
+          "zip": "SW3 4ND",
+          "country": "GB"
+        }
+      },
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create quarterly subscription for Platform License — \"Enterprise Edition\"",
+      "details": {
+        "plan_code": "PLAT_ENT",
+        "unit_amount_in_cents": 1000000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 4000000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Setup Fee (one-time)",
+      "details": {
+        "charge_code": "SETUP_FEE",
+        "description": "Initial setup & configuration — 40 hours @ $250/hr"
+      },
+      "amount_in_cents": 1000000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 3 billing actions totaling $50,000.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.715Z"
+}

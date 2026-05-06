@@ -1,0 +1,60 @@
+{
+  "opportunity_id": "opp_simple_001",
+  "opportunity_name": "Simple Corp - New Business",
+  "account_name": "Simple Corp",
+  "total_actions": 3,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 5300000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for Simple Corp",
+      "details": {
+        "account_code": "simple_corp",
+        "email": "jane@simplecorp.com",
+        "company_name": "Simple Corp",
+        "billing_address": {
+          "address1": "123 Simple St",
+          "city": "Simpletown",
+          "state": "CA",
+          "zip": "90210",
+          "country": "US"
+        }
+      },
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Professional Plan",
+      "details": {
+        "plan_code": "PRO_PLAN",
+        "unit_amount_in_cents": 400000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 4800000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Setup Fee",
+      "details": {
+        "charge_code": "SETUP_FEE",
+        "description": "One-time setup and onboarding"
+      },
+      "amount_in_cents": 500000,
+      "effective_date": "2024-11-01",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 3 billing actions totaling $53,000.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.716Z"
+}

@@ -1,0 +1,165 @@
+{
+  "opportunity_id": "opp_edge_rounding",
+  "opportunity_name": "Precision Analytics - Usage-Based Pricing",
+  "account_name": "Precision Analytics Co",
+  "total_actions": 6,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 1500001,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for Precision Analytics Co",
+      "details": {
+        "account_code": "precision_analytics_co",
+        "email": "dave@precisionanalytics.io",
+        "company_name": "Precision Analytics Co",
+        "billing_address": {
+          "address1": "42 Calculator Lane",
+          "city": "Boston",
+          "state": "MA",
+          "zip": "02101",
+          "country": "US"
+        }
+      },
+      "requires_review": true,
+      "risk_level": "medium",
+      "notes": [
+        "Line item li_frac_001 has pricing math mismatch",
+        "Line item li_frac_002 has pricing math mismatch",
+        "Line item li_frac_003 has pricing math mismatch",
+        "Line item li_frac_004 has pricing math mismatch",
+        "Line item li_frac_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for API Calls Tier 1",
+      "details": {
+        "plan_code": "API_T1",
+        "unit_amount_in_cents": 0,
+        "quantity": 10000000,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 100000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "medium",
+      "notes": [
+        "Line item li_frac_001 has pricing math mismatch",
+        "Line item li_frac_002 has pricing math mismatch",
+        "Line item li_frac_003 has pricing math mismatch",
+        "Line item li_frac_004 has pricing math mismatch",
+        "Line item li_frac_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for API Calls Tier 2",
+      "details": {
+        "plan_code": "API_T2",
+        "unit_amount_in_cents": 0,
+        "quantity": 50000000,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 250000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "medium",
+      "notes": [
+        "Line item li_frac_001 has pricing math mismatch",
+        "Line item li_frac_002 has pricing math mismatch",
+        "Line item li_frac_003 has pricing math mismatch",
+        "Line item li_frac_004 has pricing math mismatch",
+        "Line item li_frac_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Storage per GB",
+      "details": {
+        "plan_code": "STORAGE_GB",
+        "unit_amount_in_cents": 0,
+        "quantity": 3333,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 999,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "medium",
+      "notes": [
+        "Line item li_frac_001 has pricing math mismatch",
+        "Line item li_frac_002 has pricing math mismatch",
+        "Line item li_frac_003 has pricing math mismatch",
+        "Line item li_frac_004 has pricing math mismatch",
+        "Line item li_frac_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Compute Hours",
+      "details": {
+        "plan_code": "COMPUTE_HR",
+        "unit_amount_in_cents": 142857,
+        "quantity": 7,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1000001,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "medium",
+      "notes": [
+        "Line item li_frac_001 has pricing math mismatch",
+        "Line item li_frac_002 has pricing math mismatch",
+        "Line item li_frac_003 has pricing math mismatch",
+        "Line item li_frac_004 has pricing math mismatch",
+        "Line item li_frac_005 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Network Egress",
+      "details": {
+        "plan_code": "NETWORK_OUT",
+        "unit_amount_in_cents": 0,
+        "quantity": 14900100,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 149001,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "medium",
+      "notes": [
+        "Line item li_frac_001 has pricing math mismatch",
+        "Line item li_frac_002 has pricing math mismatch",
+        "Line item li_frac_003 has pricing math mismatch",
+        "Line item li_frac_004 has pricing math mismatch",
+        "Line item li_frac_005 has pricing math mismatch"
+      ]
+    }
+  ],
+  "summary": "New business order: 6 billing actions totaling $15,000.01",
+  "warnings": [
+    "Line item li_frac_001 has pricing math mismatch",
+    "Line item li_frac_002 has pricing math mismatch",
+    "Line item li_frac_003 has pricing math mismatch",
+    "Line item li_frac_004 has pricing math mismatch",
+    "Line item li_frac_005 has pricing math mismatch",
+    "Validation issue (line_items.li_frac_001.total_price): Line item math error: expected 12000.00, got 1000",
+    "Validation issue (line_items.li_frac_002.total_price): Line item math error: expected 30000.00, got 2500",
+    "Validation issue (line_items.li_frac_003.total_price): Line item math error: expected 119.99, got 9.99",
+    "Validation issue (line_items.li_frac_004.total_price): Line item math error: expected 120000.12, got 10000.01",
+    "Validation issue (line_items.li_frac_005.total_price): Line item math error: expected 17880.12, got 1490.01"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.704Z"
+}

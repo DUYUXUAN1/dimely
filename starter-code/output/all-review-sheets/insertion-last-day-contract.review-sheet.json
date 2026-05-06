@@ -1,0 +1,26 @@
+{
+  "opportunity_id": "opp_edge_lastday",
+  "opportunity_name": "LastMinute - Final Day Upsell",
+  "account_name": "LastMinute Corp",
+  "total_actions": 1,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 500000,
+  "billing_actions": [
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Emergency Data Export",
+      "details": {
+        "charge_code": "DATA_EXPORT",
+        "description": "Emergency data export service - same day delivery"
+      },
+      "amount_in_cents": 500000,
+      "effective_date": "2024-12-31",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 1 billing actions totaling $5,000.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.707Z"
+}

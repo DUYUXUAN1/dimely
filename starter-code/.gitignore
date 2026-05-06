@@ -33,9 +33,6 @@ Thumbs.db
 logs/
 *.log
 
-# Output directory
-output/
-
 # Temporary files
 *.tmp
 *.temp 

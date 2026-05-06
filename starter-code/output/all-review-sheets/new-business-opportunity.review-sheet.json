@@ -1,0 +1,118 @@
+{
+  "opportunity_id": "opp_001",
+  "opportunity_name": "Acme Corp - New Business Q4 2024",
+  "account_name": "Acme Corp",
+  "total_actions": 5,
+  "high_risk_actions": 5,
+  "estimated_total_impact": 10350000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for Acme Corp",
+      "details": {
+        "account_code": "acme_corp",
+        "email": "john.smith@acme.com",
+        "company_name": "Acme Corp",
+        "billing_address": {
+          "address1": "123 Business Ave",
+          "address2": "Suite 400",
+          "city": "San Francisco",
+          "state": "CA",
+          "zip": "94105",
+          "country": "US"
+        }
+      },
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items",
+        "Line item li_004 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Professional Plan",
+      "details": {
+        "plan_code": "PRO_PLAN",
+        "unit_amount_in_cents": 500000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 6000000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items",
+        "Line item li_004 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Analytics Service",
+      "details": {
+        "plan_code": "ANALYTICS_SVC",
+        "unit_amount_in_cents": 200000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 2400000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items",
+        "Line item li_004 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Setup Fee",
+      "details": {
+        "charge_code": "SETUP_FEE",
+        "description": "One-time setup and onboarding fee"
+      },
+      "amount_in_cents": 500000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items",
+        "Line item li_004 has pricing math mismatch"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Professional Services",
+      "details": {
+        "charge_code": "PROF_SERVICES",
+        "description": "Professional services hours"
+      },
+      "amount_in_cents": 1450000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items",
+        "Line item li_004 has pricing math mismatch"
+      ]
+    }
+  ],
+  "summary": "New business order: 5 billing actions totaling $103,500.00",
+  "warnings": [
+    "High-value transaction exceeds $100,000",
+    "High-risk action: create_account",
+    "Amount mismatch between opportunity total and line items",
+    "Line item li_004 has pricing math mismatch",
+    "High-risk action: create_subscription",
+    "High-risk action: charge_one_time",
+    "Validation issue (amount): Opportunity amount (104000) does not match sum of line items (103500.00)",
+    "Validation issue (line_items.li_004.total_price): Line item math error: expected 15000.00, got 14500"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.716Z"
+}

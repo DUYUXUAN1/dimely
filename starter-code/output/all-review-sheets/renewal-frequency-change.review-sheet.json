@@ -1,0 +1,33 @@
+{
+  "opportunity_id": "opp_edge_freqchange",
+  "opportunity_name": "FrequencyFlip - Monthly to Annual Conversion",
+  "account_name": "FrequencyFlip Ltd",
+  "total_actions": 1,
+  "high_risk_actions": 1,
+  "estimated_total_impact": 11400000,
+  "billing_actions": [
+    {
+      "type": "create_subscription",
+      "description": "Create annually subscription for Professional Platform - Annual",
+      "details": {
+        "plan_code": "PRO_ANNUAL",
+        "unit_amount_in_cents": 11400000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2025-01-01"
+      },
+      "amount_in_cents": 11400000,
+      "effective_date": "2025-01-01",
+      "requires_review": true,
+      "risk_level": "high"
+    }
+  ],
+  "summary": "New business order: 1 billing actions totaling $114,000.00",
+  "warnings": [
+    "High-value transaction exceeds $100,000",
+    "High-risk action: create_subscription"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.714Z"
+}

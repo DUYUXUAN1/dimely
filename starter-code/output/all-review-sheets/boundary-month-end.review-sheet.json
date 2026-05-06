@@ -1,0 +1,48 @@
+{
+  "opportunity_id": "opp_edge_monthend",
+  "opportunity_name": "MonthEnd - Jan 31 to Feb Boundary Test",
+  "account_name": "MonthEnd Systems",
+  "total_actions": 2,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 1200000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for MonthEnd Systems",
+      "details": {
+        "account_code": "monthend_systems",
+        "email": "edgy@monthendsystems.com",
+        "company_name": "MonthEnd Systems",
+        "billing_address": {
+          "address1": "31 Last Day Lane",
+          "city": "Portland",
+          "state": "OR",
+          "zip": "97201",
+          "country": "US"
+        }
+      },
+      "requires_review": false,
+      "risk_level": "low"
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Standard Plan",
+      "details": {
+        "plan_code": "STD_PLAN",
+        "unit_amount_in_cents": 100000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-01-31"
+      },
+      "amount_in_cents": 1200000,
+      "effective_date": "2024-01-31",
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 2 billing actions totaling $12,000.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.700Z"
+}

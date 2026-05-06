@@ -1,0 +1,872 @@
+{
+  "opportunity_id": "opp_edge_manyitems",
+  "opportunity_name": "MegaBundle - 50 Product Bundle",
+  "account_name": "MegaBundle Enterprises",
+  "total_actions": 51,
+  "high_risk_actions": 51,
+  "estimated_total_impact": 11730000,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for MegaBundle Enterprises",
+      "details": {
+        "account_code": "megabundle_enterprises",
+        "email": "max@megabundle.com",
+        "company_name": "MegaBundle Enterprises",
+        "billing_address": {
+          "address1": "50 Line Item Way",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78701",
+          "country": "US"
+        }
+      },
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 01 - Core",
+      "details": {
+        "plan_code": "MOD_01",
+        "unit_amount_in_cents": 50000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 600000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 02 - Analytics",
+      "details": {
+        "plan_code": "MOD_02",
+        "unit_amount_in_cents": 30000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 360000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 03 - Reporting",
+      "details": {
+        "plan_code": "MOD_03",
+        "unit_amount_in_cents": 25000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 300000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 04 - Dashboard",
+      "details": {
+        "plan_code": "MOD_04",
+        "unit_amount_in_cents": 20000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 240000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 05 - API Access",
+      "details": {
+        "plan_code": "MOD_05",
+        "unit_amount_in_cents": 40000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 480000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 06 - Integrations",
+      "details": {
+        "plan_code": "MOD_06",
+        "unit_amount_in_cents": 35000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 420000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 07 - Automation",
+      "details": {
+        "plan_code": "MOD_07",
+        "unit_amount_in_cents": 45000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 540000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 08 - Security",
+      "details": {
+        "plan_code": "MOD_08",
+        "unit_amount_in_cents": 60000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 720000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 09 - Compliance",
+      "details": {
+        "plan_code": "MOD_09",
+        "unit_amount_in_cents": 55000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 660000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 10 - Audit",
+      "details": {
+        "plan_code": "MOD_10",
+        "unit_amount_in_cents": 40000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 480000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 11 - Users",
+      "details": {
+        "plan_code": "MOD_11",
+        "unit_amount_in_cents": 1000,
+        "quantity": 100,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1200000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 12 - Storage 1TB",
+      "details": {
+        "plan_code": "MOD_12",
+        "unit_amount_in_cents": 5000,
+        "quantity": 10,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 600000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 13 - Bandwidth",
+      "details": {
+        "plan_code": "MOD_13",
+        "unit_amount_in_cents": 20000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 240000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 14 - CDN",
+      "details": {
+        "plan_code": "MOD_14",
+        "unit_amount_in_cents": 15000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 180000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 15 - Cache",
+      "details": {
+        "plan_code": "MOD_15",
+        "unit_amount_in_cents": 10000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 120000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 16 - Search",
+      "details": {
+        "plan_code": "MOD_16",
+        "unit_amount_in_cents": 30000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 360000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 17 - ML",
+      "details": {
+        "plan_code": "MOD_17",
+        "unit_amount_in_cents": 80000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 960000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 18 - AI",
+      "details": {
+        "plan_code": "MOD_18",
+        "unit_amount_in_cents": 90000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 1080000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 19 - NLP",
+      "details": {
+        "plan_code": "MOD_19",
+        "unit_amount_in_cents": 50000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 600000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "create_subscription",
+      "description": "Create monthly subscription for Module 20 - Vision",
+      "details": {
+        "plan_code": "MOD_20",
+        "unit_amount_in_cents": 70000,
+        "quantity": 1,
+        "collection_method": "manual",
+        "net_terms": 30,
+        "starts_at": "2024-11-01"
+      },
+      "amount_in_cents": 840000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 01",
+      "details": {
+        "charge_code": "ADD_01",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 02",
+      "details": {
+        "charge_code": "ADD_02",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 03",
+      "details": {
+        "charge_code": "ADD_03",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 04",
+      "details": {
+        "charge_code": "ADD_04",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 05",
+      "details": {
+        "charge_code": "ADD_05",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 06",
+      "details": {
+        "charge_code": "ADD_06",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 07",
+      "details": {
+        "charge_code": "ADD_07",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 08",
+      "details": {
+        "charge_code": "ADD_08",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 09",
+      "details": {
+        "charge_code": "ADD_09",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Add-on 10",
+      "details": {
+        "charge_code": "ADD_10",
+        "description": "One-time add-on"
+      },
+      "amount_in_cents": 5000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 01",
+      "details": {
+        "charge_code": "SVC_01",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 02",
+      "details": {
+        "charge_code": "SVC_02",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 03",
+      "details": {
+        "charge_code": "SVC_03",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 04",
+      "details": {
+        "charge_code": "SVC_04",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 05",
+      "details": {
+        "charge_code": "SVC_05",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 06",
+      "details": {
+        "charge_code": "SVC_06",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 07",
+      "details": {
+        "charge_code": "SVC_07",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 08",
+      "details": {
+        "charge_code": "SVC_08",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 09",
+      "details": {
+        "charge_code": "SVC_09",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Service 10",
+      "details": {
+        "charge_code": "SVC_10",
+        "description": "Professional services"
+      },
+      "amount_in_cents": 50000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Credit 01",
+      "details": {
+        "charge_code": "CREDIT_01",
+        "description": "API credits"
+      },
+      "amount_in_cents": 100000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Credit 02",
+      "details": {
+        "charge_code": "CREDIT_02",
+        "description": "API credits"
+      },
+      "amount_in_cents": 100000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Credit 03",
+      "details": {
+        "charge_code": "CREDIT_03",
+        "description": "API credits"
+      },
+      "amount_in_cents": 100000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Credit 04",
+      "details": {
+        "charge_code": "CREDIT_04",
+        "description": "API credits"
+      },
+      "amount_in_cents": 100000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Credit 05",
+      "details": {
+        "charge_code": "CREDIT_05",
+        "description": "API credits"
+      },
+      "amount_in_cents": 100000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Discount - Volume",
+      "details": {
+        "charge_code": "DISC_VOL",
+        "description": "Volume discount"
+      },
+      "amount_in_cents": -500000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Discount - Loyalty",
+      "details": {
+        "charge_code": "DISC_LOYAL",
+        "description": "Loyalty discount"
+      },
+      "amount_in_cents": -200000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Discount - Promo",
+      "details": {
+        "charge_code": "DISC_PROMO",
+        "description": "Promotional discount"
+      },
+      "amount_in_cents": -100000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Tax - State",
+      "details": {
+        "charge_code": "TAX_STATE",
+        "description": "State tax"
+      },
+      "amount_in_cents": 350000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    },
+    {
+      "type": "charge_one_time",
+      "description": "One-time charge for Tax - Local",
+      "details": {
+        "charge_code": "TAX_LOCAL",
+        "description": "Local tax"
+      },
+      "amount_in_cents": 150000,
+      "effective_date": "2024-11-01",
+      "requires_review": true,
+      "risk_level": "high",
+      "notes": [
+        "Amount mismatch between opportunity total and line items"
+      ]
+    }
+  ],
+  "summary": "New business order: 51 billing actions totaling $117,300.00",
+  "warnings": [
+    "High-value transaction exceeds $100,000",
+    "High-risk action: create_account",
+    "Amount mismatch between opportunity total and line items",
+    "High-risk action: create_subscription",
+    "High-risk action: charge_one_time",
+    "Validation issue (amount): Opportunity amount (125000) does not match sum of line items (117300.00)"
+  ],
+  "manual_review_required": true,
+  "generated_at": "2026-05-06T18:55:00.698Z"
+}

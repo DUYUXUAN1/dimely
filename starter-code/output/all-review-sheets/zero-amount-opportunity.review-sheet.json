@@ -1,0 +1,32 @@
+{
+  "opportunity_id": "opp_edge_zero",
+  "opportunity_name": "Pilot Program Inc - Free Trial",
+  "account_name": "Pilot Program Inc",
+  "total_actions": 1,
+  "high_risk_actions": 0,
+  "estimated_total_impact": 0,
+  "billing_actions": [
+    {
+      "type": "create_account",
+      "description": "Create new Recurly account for Pilot Program Inc",
+      "details": {
+        "account_code": "pilot_program_inc",
+        "email": "alex@pilotprogram.com",
+        "company_name": "Pilot Program Inc",
+        "billing_address": {
+          "address1": "100 Free Way",
+          "city": "San Francisco",
+          "state": "CA",
+          "zip": "94105",
+          "country": "US"
+        }
+      },
+      "requires_review": false,
+      "risk_level": "low"
+    }
+  ],
+  "summary": "New business order: 1 billing actions totaling $0.00",
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T18:55:00.716Z"
+}
