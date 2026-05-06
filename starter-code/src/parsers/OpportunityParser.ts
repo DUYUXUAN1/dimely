@@ -97,8 +97,49 @@ function parseDateParts(value: string): Date {
  */
 function validateLineItemMath(
   item: LineItem, 
-  contractMonths: number
+  contractMonths: number,
+  prorationDetails?: any
 ): ValidationError | null {
+  if (item.proration_needed) {
+    const prorationFactor =
+      typeof prorationDetails?.proration_factor === 'number' ? prorationDetails.proration_factor : undefined;
+    const monthsRemaining =
+      typeof item.months_remaining === 'number' && item.months_remaining >= 0
+        ? item.months_remaining
+        : undefined;
+
+    let expectedProrated: number | null = null;
+    if (prorationFactor !== undefined) {
+      expectedProrated = item.quantity * item.unit_price * prorationFactor;
+    } else if (monthsRemaining !== undefined) {
+      switch (item.billing_period) {
+        case 'monthly':
+          expectedProrated = item.quantity * item.unit_price * monthsRemaining;
+          break;
+        case 'quarterly':
+          expectedProrated = item.quantity * item.unit_price * (monthsRemaining / 3);
+          break;
+        case 'annually':
+          expectedProrated = item.quantity * item.unit_price * (monthsRemaining / 12);
+          break;
+        case 'one_time':
+          expectedProrated = item.quantity * item.unit_price;
+          break;
+      }
+    }
+
+    if (expectedProrated !== null && Math.abs(item.total_price - expectedProrated) > 0.01) {
+      return {
+        field: `line_items.${item.id}.total_price`,
+        message: `Prorated line item math error: expected ${expectedProrated.toFixed(2)}, got ${item.total_price}`,
+        value: item.total_price,
+      };
+    }
+
+    // If this is marked as prorated but we do not have enough metadata, defer to manual review upstream.
+    return null;
+  }
+
   let expected: number;
   
   switch (item.billing_period) {
@@ -210,7 +251,7 @@ export class OpportunityParser {
         opportunity.contract_end_date
       );
       for (const item of opportunity.line_items) {
-        const mathError = validateLineItemMath(item, contractMonths);
+        const mathError = validateLineItemMath(item, contractMonths, opportunity.proration_details);
         if (mathError) errors.push(mathError);
       }
       

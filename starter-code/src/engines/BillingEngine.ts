@@ -249,9 +249,13 @@ export class BillingEngine {
       if (lineItem.is_new_service && lineItem.replaces_self_service) {
         warnings.push(`Line item ${lineItem.id} has contradictory service flags`);
       }
-      const expected = this.expectedLineTotal(lineItem, contractMonths);
+      const expected = this.expectedLineTotal(lineItem, contractMonths, opportunity.proration_details);
       if (expected !== null && Math.abs(lineItem.total_price - expected) > 0.01) {
-        warnings.push(`Line item ${lineItem.id} has pricing math mismatch`);
+        warnings.push(
+          lineItem.proration_needed
+            ? `Line item ${lineItem.id} has prorated pricing mismatch`
+            : `Line item ${lineItem.id} has pricing math mismatch`
+        );
       }
     }
 
@@ -274,8 +278,37 @@ export class BillingEngine {
 
   private expectedLineTotal(
     lineItem: Opportunity['line_items'][number],
-    contractMonths: number
+    contractMonths: number,
+    prorationDetails?: any
   ): number | null {
+    if (lineItem.proration_needed) {
+      const prorationFactor =
+        typeof prorationDetails?.proration_factor === 'number' ? prorationDetails.proration_factor : undefined;
+      const monthsRemaining =
+        typeof lineItem.months_remaining === 'number' && lineItem.months_remaining >= 0
+          ? lineItem.months_remaining
+          : undefined;
+
+      if (prorationFactor !== undefined) {
+        return lineItem.quantity * lineItem.unit_price * prorationFactor;
+      }
+      if (monthsRemaining !== undefined) {
+        switch (lineItem.billing_period) {
+          case 'one_time':
+            return lineItem.quantity * lineItem.unit_price;
+          case 'monthly':
+            return lineItem.quantity * lineItem.unit_price * monthsRemaining;
+          case 'quarterly':
+            return lineItem.quantity * lineItem.unit_price * (monthsRemaining / 3);
+          case 'annually':
+            return lineItem.quantity * lineItem.unit_price * (monthsRemaining / 12);
+          default:
+            return null;
+        }
+      }
+      return null;
+    }
+
     switch (lineItem.billing_period) {
       case 'one_time':
         return lineItem.quantity * lineItem.unit_price;

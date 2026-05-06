@@ -65,5 +65,5 @@
     "Validation issue (billing_transition.refund_items.0.days_in_period): Refund days_in_period mismatch: expected 31, got 30"
   ],
   "manual_review_required": true,
-  "generated_at": "2026-05-06T18:55:00.701Z"
+  "generated_at": "2026-05-06T19:37:09.673Z"
 }

@@ -97,5 +97,5 @@
     "Validation issue (billing_transition.refund_items.0.refund_amount): Refund amount mismatch: expected 152.57, got 147.65"
   ],
   "manual_review_required": true,
-  "generated_at": "2026-05-06T18:55:00.695Z"
+  "generated_at": "2026-05-06T19:37:09.665Z"
 }

@@ -19,11 +19,8 @@
       },
       "amount_in_cents": 150000,
       "effective_date": "2024-11-15",
-      "requires_review": true,
-      "risk_level": "medium",
-      "notes": [
-        "Line item li_midq_001 has pricing math mismatch"
-      ]
+      "requires_review": false,
+      "risk_level": "low"
     },
     {
       "type": "charge_one_time",
@@ -34,18 +31,12 @@
       },
       "amount_in_cents": 300000,
       "effective_date": "2024-11-15",
-      "requires_review": true,
-      "risk_level": "medium",
-      "notes": [
-        "Line item li_midq_001 has pricing math mismatch"
-      ]
+      "requires_review": false,
+      "risk_level": "low"
     }
   ],
   "summary": "New business order: 2 billing actions totaling $4,500.00",
-  "warnings": [
-    "Line item li_midq_001 has pricing math mismatch",
-    "Validation issue (line_items.li_midq_001.total_price): Line item math error: expected 6000.00, got 1500"
-  ],
-  "manual_review_required": true,
-  "generated_at": "2026-05-06T18:55:00.709Z"
+  "warnings": [],
+  "manual_review_required": false,
+  "generated_at": "2026-05-06T19:37:09.681Z"
 }
