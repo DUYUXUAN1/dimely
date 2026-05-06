@@ -1,0 +1,50 @@
+{
+  "id": "opp_edge_quarterly",
+  "type": "new_business",
+  "account_name": "QuarterlyBill LLC",
+  "account_id": "acc_quarterly_001",
+  "opportunity_name": "QuarterlyBill - Q1 Start Quarterly Billing",
+  "close_date": "2024-12-15",
+  "amount": 48000,
+  "contract_start_date": "2025-01-01",
+  "contract_end_date": "2025-12-31",
+  "billing_frequency": "quarterly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_q_001",
+      "product_name": "Professional Platform",
+      "product_code": "PRO_PLAT",
+      "quantity": 1,
+      "unit_price": 9000,
+      "total_price": 36000,
+      "billing_period": "quarterly",
+      "description": "Professional platform - 4 quarters @ $9,000"
+    },
+    {
+      "id": "li_q_002",
+      "product_name": "Premium Support",
+      "product_code": "PREM_SUPP",
+      "quantity": 1,
+      "unit_price": 3000,
+      "total_price": 12000,
+      "billing_period": "quarterly",
+      "description": "Premium support package - 4 quarters @ $3,000"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Quincy Quarterly",
+    "email": "quincy@quarterlybill.com",
+    "billing_address": {
+      "company": "QuarterlyBill LLC",
+      "address_line_1": "4 Quarters Way",
+      "city": "Charlotte",
+      "state": "NC",
+      "postal_code": "28201",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Mid-Market Team",
+  "notes": "Pure quarterly billing: Q1 (Jan-Mar), Q2 (Apr-Jun), Q3 (Jul-Sep), Q4 (Oct-Dec). Invoice dates: Jan 1, Apr 1, Jul 1, Oct 1."
+}
+

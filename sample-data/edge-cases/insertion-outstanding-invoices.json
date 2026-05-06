@@ -1,0 +1,73 @@
+{
+  "id": "opp_edge_outstanding",
+  "type": "insertion_order",
+  "account_name": "DelinquentPay Inc",
+  "account_id": "acc_delinq_001",
+  "recurly_account_code": "delinquent_pay",
+  "opportunity_name": "DelinquentPay - Upsell with Outstanding AR",
+  "close_date": "2024-10-15",
+  "amount": 12000,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2024-12-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "due_on_receipt",
+  "existing_contract": {
+    "id": "contract_delinq_2024",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "remaining_months": 2
+  },
+  "line_items": [
+    {
+      "id": "li_delinq_001",
+      "product_name": "Additional Users",
+      "product_code": "ADD_USERS",
+      "quantity": 50,
+      "unit_price": 100,
+      "total_price": 10000,
+      "billing_period": "monthly",
+      "description": "50 additional user seats for 2 months",
+      "proration_needed": false
+    },
+    {
+      "id": "li_delinq_002",
+      "product_name": "Storage Upgrade",
+      "product_code": "STORAGE_UP",
+      "quantity": 1,
+      "unit_price": 2000,
+      "total_price": 2000,
+      "billing_period": "one_time",
+      "description": "One-time storage upgrade"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Debtor Dave",
+    "email": "dave@delinquentpay.com",
+    "billing_address": {
+      "company": "DelinquentPay Inc",
+      "address_line_1": "404 Payment Not Found St",
+      "city": "Miami",
+      "state": "FL",
+      "postal_code": "33101",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Collections Partnership",
+  "outstanding_invoices": {
+    "has_outstanding": true,
+    "invoice_ids": ["INV-2024-0456", "INV-2024-0789", "INV-2024-1012"],
+    "total_outstanding": 25000,
+    "oldest_invoice_date": "2024-06-01",
+    "days_past_due": 137,
+    "requires_processing": true,
+    "collection_status": "final_notice_sent"
+  },
+  "insertion_notes": [
+    "CRITICAL: Customer has $25,000 in outstanding invoices",
+    "Oldest invoice is 137 days past due",
+    "Sales approved upsell contingent on payment plan",
+    "Require full outstanding balance payment before provisioning",
+    "New orders require payment on receipt terms"
+  ]
+}
+

@@ -1,0 +1,70 @@
+{
+  "id": "opp_edge_onetime",
+  "type": "new_business",
+  "account_name": "OneTimeOnly Inc",
+  "account_id": "acc_onetime_001",
+  "opportunity_name": "OneTimeOnly - Services Only Contract",
+  "close_date": "2024-10-15",
+  "amount": 75000,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2024-12-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_ot_001",
+      "product_name": "System Assessment",
+      "product_code": "ASSESS",
+      "quantity": 1,
+      "unit_price": 15000,
+      "total_price": 15000,
+      "billing_period": "one_time",
+      "description": "Comprehensive system assessment and audit"
+    },
+    {
+      "id": "li_ot_002",
+      "product_name": "Architecture Design",
+      "product_code": "ARCH_DESIGN",
+      "quantity": 1,
+      "unit_price": 25000,
+      "total_price": 25000,
+      "billing_period": "one_time",
+      "description": "Solution architecture and design documentation"
+    },
+    {
+      "id": "li_ot_003",
+      "product_name": "Implementation Services",
+      "product_code": "IMPL_SVC",
+      "quantity": 100,
+      "unit_price": 250,
+      "total_price": 25000,
+      "billing_period": "one_time",
+      "description": "100 hours of implementation services"
+    },
+    {
+      "id": "li_ot_004",
+      "product_name": "Training",
+      "product_code": "TRAINING",
+      "quantity": 20,
+      "unit_price": 500,
+      "total_price": 10000,
+      "billing_period": "one_time",
+      "description": "20 training sessions for staff"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Otto Onetime",
+    "email": "otto@onetimeonly.com",
+    "billing_address": {
+      "company": "OneTimeOnly Inc",
+      "address_line_1": "1 Single Lane",
+      "city": "Dallas",
+      "state": "TX",
+      "postal_code": "75201",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Professional Services",
+  "notes": "Project-based engagement with only one-time charges. No recurring subscriptions. All services billed upfront upon contract execution."
+}
+

@@ -1,0 +1,90 @@
+{
+  "id": "opp_edge_multiyear",
+  "type": "new_business",
+  "account_name": "LongTerm Partners Ltd",
+  "account_id": "acc_longterm_001",
+  "opportunity_name": "LongTerm Partners - 5 Year Strategic Agreement",
+  "close_date": "2024-10-15",
+  "amount": 3000000,
+  "contract_start_date": "2025-01-01",
+  "contract_end_date": "2029-12-31",
+  "billing_frequency": "annually",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_my_001",
+      "product_name": "Platform License - Year 1",
+      "product_code": "PLATFORM_Y1",
+      "quantity": 1,
+      "unit_price": 500000,
+      "total_price": 500000,
+      "billing_period": "annually",
+      "description": "Year 1 platform license"
+    },
+    {
+      "id": "li_my_002",
+      "product_name": "Platform License - Year 2",
+      "product_code": "PLATFORM_Y2",
+      "quantity": 1,
+      "unit_price": 525000,
+      "total_price": 525000,
+      "billing_period": "annually",
+      "description": "Year 2 platform license (5% increase)"
+    },
+    {
+      "id": "li_my_003",
+      "product_name": "Platform License - Year 3",
+      "product_code": "PLATFORM_Y3",
+      "quantity": 1,
+      "unit_price": 551250,
+      "total_price": 551250,
+      "billing_period": "annually",
+      "description": "Year 3 platform license (5% increase)"
+    },
+    {
+      "id": "li_my_004",
+      "product_name": "Platform License - Year 4",
+      "product_code": "PLATFORM_Y4",
+      "quantity": 1,
+      "unit_price": 578812.50,
+      "total_price": 578812.50,
+      "billing_period": "annually",
+      "description": "Year 4 platform license (5% increase)"
+    },
+    {
+      "id": "li_my_005",
+      "product_name": "Platform License - Year 5",
+      "product_code": "PLATFORM_Y5",
+      "quantity": 1,
+      "unit_price": 607753.13,
+      "total_price": 607753.13,
+      "billing_period": "annually",
+      "description": "Year 5 platform license (5% increase)"
+    },
+    {
+      "id": "li_my_006",
+      "product_name": "Initial Setup",
+      "product_code": "SETUP_STRAT",
+      "quantity": 1,
+      "unit_price": 237184.37,
+      "total_price": 237184.37,
+      "billing_period": "one_time",
+      "description": "Strategic implementation and setup"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Patricia Patience",
+    "email": "patricia@longtermpartners.com",
+    "billing_address": {
+      "company": "LongTerm Partners Ltd",
+      "address_line_1": "500 Commitment Drive",
+      "city": "Chicago",
+      "state": "IL",
+      "postal_code": "60601",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Strategic Accounts",
+  "notes": "5-year commitment with 5% annual price escalation. Each year billed annually on anniversary date."
+}
+

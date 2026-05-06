@@ -1,0 +1,40 @@
+{
+  "id": "opp_edge_backstart",
+  "type": "new_business",
+  "account_name": "BackStart Corp",
+  "account_id": "acc_backstart_001",
+  "opportunity_name": "BackStart - Retroactive Contract",
+  "close_date": "2024-10-15",
+  "amount": 120000,
+  "contract_start_date": "2024-01-01",
+  "contract_end_date": "2024-12-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_back_001",
+      "product_name": "Professional Plan",
+      "product_code": "PRO_PLAN",
+      "quantity": 1,
+      "unit_price": 10000,
+      "total_price": 120000,
+      "billing_period": "monthly",
+      "description": "Professional plan - retroactive to Jan 1"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Ben Backdate",
+    "email": "ben@backstart.com",
+    "billing_address": {
+      "company": "BackStart Corp",
+      "address_line_1": "1 Yesterday Lane",
+      "city": "Cleveland",
+      "state": "OH",
+      "postal_code": "44101",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Special Contracts",
+  "notes": "Contract signed October 2024 but backdated to January 1, 2024. Customer was on trial/POC and now converting. Backbilling for 9 months of service already consumed. First invoice will cover Jan-Oct 2024 ($100,000), then Nov-Dec 2024 ($20,000)."
+}
+

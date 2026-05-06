@@ -1,0 +1,61 @@
+{
+  "id": "opp_edge_negative",
+  "type": "insertion_order",
+  "account_name": "CreditBack Corp",
+  "account_id": "acc_credit_001",
+  "recurly_account_code": "credit_back",
+  "opportunity_name": "CreditBack - SLA Credit & Adjustment",
+  "close_date": "2024-10-15",
+  "amount": -15000,
+  "contract_start_date": "2024-10-15",
+  "contract_end_date": "2024-10-15",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "existing_contract": {
+    "id": "contract_credit_2024",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  "line_items": [
+    {
+      "id": "li_neg_001",
+      "product_name": "SLA Credit - Q3 Outages",
+      "product_code": "SLA_CREDIT",
+      "quantity": 1,
+      "unit_price": -10000,
+      "total_price": -10000,
+      "billing_period": "one_time",
+      "description": "Credit for 99.5% SLA miss (target: 99.99%) - 8 hours downtime"
+    },
+    {
+      "id": "li_neg_002",
+      "product_name": "Billing Adjustment",
+      "product_code": "BILLING_ADJ",
+      "quantity": 1,
+      "unit_price": -5000,
+      "total_price": -5000,
+      "billing_period": "one_time",
+      "description": "Correction for duplicate invoice #INV-2024-892"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Credit Catherine",
+    "email": "catherine@creditback.com",
+    "billing_address": {
+      "company": "CreditBack Corp",
+      "address_line_1": "200 Refund Way",
+      "city": "Houston",
+      "state": "TX",
+      "postal_code": "77001",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Customer Success",
+  "insertion_notes": [
+    "SLA credit for Q3 2024 outages",
+    "$10,000 credit per SLA agreement",
+    "Additional $5,000 for billing error correction",
+    "Total credit: $15,000 applied to account"
+  ]
+}
+

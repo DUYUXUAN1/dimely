@@ -1,0 +1,84 @@
+{
+  "id": "opp_edge_midquarter",
+  "type": "insertion_order",
+  "account_name": "MidQuarter Analytics",
+  "account_id": "acc_midq_001",
+  "recurly_account_code": "mid_quarter",
+  "opportunity_name": "MidQuarter - Complex Proration Upsell",
+  "close_date": "2024-11-15",
+  "amount": 4500,
+  "contract_start_date": "2024-11-15",
+  "contract_end_date": "2024-12-31",
+  "billing_frequency": "quarterly",
+  "payment_terms": "net_30",
+  "existing_contract": {
+    "id": "contract_midq_2024",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "current_quarter_start": "2024-10-01",
+    "current_quarter_end": "2024-12-31",
+    "days_remaining_in_quarter": 46,
+    "days_in_quarter": 92
+  },
+  "line_items": [
+    {
+      "id": "li_midq_001",
+      "product_name": "Premium Analytics Add-on",
+      "product_code": "PREM_ANALYTICS",
+      "quantity": 1,
+      "unit_price": 3000,
+      "total_price": 1500,
+      "billing_period": "monthly",
+      "description": "Premium analytics - prorated for 46 days remaining (50% of quarter)",
+      "item_classification": "subscription_consumption",
+      "proration_needed": true,
+      "months_remaining": 1.5,
+      "affects_base_subscription": true
+    },
+    {
+      "id": "li_midq_002",
+      "product_name": "Implementation Support",
+      "product_code": "IMPL_SUPPORT",
+      "quantity": 10,
+      "unit_price": 300,
+      "total_price": 3000,
+      "billing_period": "one_time",
+      "description": "10 hours implementation support",
+      "item_classification": "one_time_service",
+      "proration_needed": false,
+      "immediate_invoice": true
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Quinn Quarter",
+    "email": "quinn@midquarter.com",
+    "billing_address": {
+      "company": "MidQuarter Analytics",
+      "address_line_1": "45 Proration Plaza",
+      "city": "Boston",
+      "state": "MA",
+      "postal_code": "02101",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Analytics Team",
+  "proration_details": {
+    "proration_method": "day_based",
+    "current_period_end": "2024-12-31",
+    "upsell_start_date": "2024-11-15",
+    "days_remaining": 46,
+    "days_in_period": 92,
+    "proration_factor": 0.5,
+    "billing_scenarios": {
+      "subscription_item": "Prorated at 50% for remaining quarter",
+      "one_time_item": "Full charge immediately"
+    }
+  },
+  "insertion_notes": [
+    "Customer wants premium analytics mid-quarter",
+    "Prorate subscription portion for 46 remaining days",
+    "Implementation services billed immediately in full",
+    "Next full quarterly charge starts January 1"
+  ]
+}
+

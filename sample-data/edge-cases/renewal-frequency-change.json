@@ -1,0 +1,56 @@
+{
+  "id": "opp_edge_freqchange",
+  "type": "renewal",
+  "account_name": "FrequencyFlip Ltd",
+  "account_id": "acc_freq_001",
+  "recurly_account_code": "frequency_flip",
+  "opportunity_name": "FrequencyFlip - Monthly to Annual Conversion",
+  "close_date": "2024-10-15",
+  "amount": 114000,
+  "contract_start_date": "2025-01-01",
+  "contract_end_date": "2025-12-31",
+  "billing_frequency": "annually",
+  "payment_terms": "net_30",
+  "previous_contract": {
+    "id": "contract_freq_2024",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "annual_value": 120000,
+    "billing_frequency": "monthly",
+    "monthly_amount": 10000
+  },
+  "line_items": [
+    {
+      "id": "li_freq_001",
+      "product_name": "Professional Platform - Annual",
+      "product_code": "PRO_ANNUAL",
+      "quantity": 1,
+      "unit_price": 114000,
+      "total_price": 114000,
+      "billing_period": "annually",
+      "description": "Annual billing with 5% discount (was $120k/year monthly)",
+      "previous_price": 10000,
+      "price_change_reason": "Billing frequency change: monthly to annual with 5% discount"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Frequency Frank",
+    "email": "frank@frequencyflip.com",
+    "billing_address": {
+      "company": "FrequencyFlip Ltd",
+      "address_line_1": "12 Billing Cycle Blvd",
+      "city": "Portland",
+      "state": "OR",
+      "postal_code": "97201",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Finance Partnership",
+  "renewal_notes": [
+    "Customer switching from monthly to annual billing",
+    "5% discount applied for annual commitment",
+    "Single invoice due January 1st",
+    "Payment terms: Net 30"
+  ]
+}
+

@@ -1,0 +1,41 @@
+{
+  "id": "opp_edge_longname",
+  "type": "new_business",
+  "account_name": "The Extraordinarily Long Named Corporation of America and Its Many International Subsidiaries Including European and Asian Pacific Operations Unified Under One Corporate Umbrella Structure LLC",
+  "account_id": "acc_longname_001",
+  "opportunity_name": "The Extraordinarily Long Named Corporation of America and Its Many International Subsidiaries - Enterprise Platform License Agreement for Fiscal Year 2024-2025 Including All Modules and Add-ons",
+  "close_date": "2024-10-15",
+  "amount": 120000,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "annually",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_long_001",
+      "product_name": "Enterprise Platform License with Advanced Analytics, Premium Support, Extended API Access, Custom Integrations, and Dedicated Customer Success Management Services Bundle",
+      "product_code": "ENT_BUNDLE_ULTRA_PREMIUM_PLUS_MAX_EDITION_V2024",
+      "quantity": 1,
+      "unit_price": 120000,
+      "total_price": 120000,
+      "billing_period": "annually",
+      "description": "Comprehensive enterprise platform license including all premium features, advanced analytics dashboards, 24/7 priority support with dedicated technical account manager, unlimited API access with enhanced rate limits, custom integration development services, and ongoing customer success management with quarterly business reviews and strategic planning sessions"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Alexander Bartholomew Christopher Davidson-Fitzgerald III",
+    "email": "alexander.bartholomew.christopher.davidson-fitzgerald.iii@extraordinarilylongcorporation.com",
+    "billing_address": {
+      "company": "The Extraordinarily Long Named Corporation of America and Its Many International Subsidiaries Including European and Asian Pacific Operations Unified Under One Corporate Umbrella Structure LLC",
+      "address_line_1": "12345678901234567890 Very Long Street Name That Goes On And On Boulevard",
+      "address_line_2": "Building Alpha-Bravo-Charlie, Suite 9999, Floor 100",
+      "city": "San Francisco",
+      "state": "CA",
+      "postal_code": "94105",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Enterprise Accounts Team Lead Senior Manager Director Vice President",
+  "notes": "Test case for extremely long field values. All names, descriptions, and identifiers are intentionally verbose to test maximum field length handling and UI truncation behavior."
+}
+

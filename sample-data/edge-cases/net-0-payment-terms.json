@@ -1,0 +1,40 @@
+{
+  "id": "opp_edge_net0",
+  "type": "new_business",
+  "account_name": "PayNow Corporation",
+  "account_id": "acc_paynow_001",
+  "opportunity_name": "PayNow - Due on Receipt",
+  "close_date": "2024-10-15",
+  "amount": 24000,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_0",
+  "line_items": [
+    {
+      "id": "li_net0_001",
+      "product_name": "Standard Plan",
+      "product_code": "STD_PLAN",
+      "quantity": 1,
+      "unit_price": 2000,
+      "total_price": 24000,
+      "billing_period": "monthly",
+      "description": "Standard plan with immediate payment terms"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Norm Noterms",
+    "email": "norm@paynow.com",
+    "billing_address": {
+      "company": "PayNow Corporation",
+      "address_line_1": "0 Days Lane",
+      "city": "Sacramento",
+      "state": "CA",
+      "postal_code": "95814",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Prepaid Team",
+  "notes": "Net-0 payment terms: payment due immediately upon invoice. No grace period. Invoice date = due date."
+}
+

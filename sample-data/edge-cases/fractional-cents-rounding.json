@@ -1,0 +1,80 @@
+{
+  "id": "opp_edge_rounding",
+  "type": "new_business",
+  "account_name": "Precision Analytics Co",
+  "account_id": "acc_precision_001",
+  "opportunity_name": "Precision Analytics - Usage-Based Pricing",
+  "close_date": "2024-10-15",
+  "amount": 15000.01,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_frac_001",
+      "product_name": "API Calls Tier 1",
+      "product_code": "API_T1",
+      "quantity": 10000000,
+      "unit_price": 0.0001,
+      "total_price": 1000,
+      "billing_period": "monthly",
+      "description": "First 10M API calls at $0.0001 each"
+    },
+    {
+      "id": "li_frac_002",
+      "product_name": "API Calls Tier 2",
+      "product_code": "API_T2",
+      "quantity": 50000000,
+      "unit_price": 0.00005,
+      "total_price": 2500,
+      "billing_period": "monthly",
+      "description": "Next 50M API calls at $0.00005 each"
+    },
+    {
+      "id": "li_frac_003",
+      "product_name": "Storage per GB",
+      "product_code": "STORAGE_GB",
+      "quantity": 3333,
+      "unit_price": 0.003,
+      "total_price": 9.99,
+      "billing_period": "monthly",
+      "description": "Storage at $0.003 per GB (3333 * 0.003 = 9.999)"
+    },
+    {
+      "id": "li_frac_004",
+      "product_name": "Compute Hours",
+      "product_code": "COMPUTE_HR",
+      "quantity": 7,
+      "unit_price": 1428.572857,
+      "total_price": 10000.01,
+      "billing_period": "monthly",
+      "description": "Compute hours with complex decimal pricing"
+    },
+    {
+      "id": "li_frac_005",
+      "product_name": "Network Egress",
+      "product_code": "NETWORK_OUT",
+      "quantity": 14900100,
+      "unit_price": 0.0001,
+      "total_price": 1490.01,
+      "billing_period": "monthly",
+      "description": "Network egress per 10KB chunk"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Decimal Dave",
+    "email": "dave@precisionanalytics.io",
+    "billing_address": {
+      "company": "Precision Analytics Co",
+      "address_line_1": "42 Calculator Lane",
+      "city": "Boston",
+      "state": "MA",
+      "postal_code": "02101",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Tech Sales",
+  "notes": "Usage-based pricing with sub-penny rates. Watch for rounding issues across billing periods."
+}
+

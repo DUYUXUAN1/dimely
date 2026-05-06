@@ -1,0 +1,89 @@
+{
+  "id": "opp_edge_annualmonthly",
+  "type": "conversion_order",
+  "account_name": "AnnualToMonthly Inc",
+  "account_id": "acc_a2m_001",
+  "recurly_account_code": "annual_to_monthly_ss",
+  "opportunity_name": "AnnualToMonthly - Annual Plan Conversion Mid-Year",
+  "close_date": "2024-10-15",
+  "amount": 72000,
+  "conversion_date": "2024-11-01",
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "existing_self_service": {
+    "plan_code": "pro_annual",
+    "annual_amount": 2388,
+    "monthly_equivalent": 199,
+    "current_period_start": "2024-03-01",
+    "current_period_end": "2025-02-28",
+    "subscription_id": "sub_a2m_ss_001",
+    "started_date": "2023-03-01",
+    "payment_method": "credit_card",
+    "months_remaining": 4,
+    "days_remaining": 120
+  },
+  "line_items": [
+    {
+      "id": "li_a2m_001",
+      "product_name": "Enterprise Plan",
+      "product_code": "ENT_PLAN",
+      "quantity": 1,
+      "unit_price": 6000,
+      "total_price": 72000,
+      "billing_period": "monthly",
+      "description": "Enterprise plan - monthly billing",
+      "replaces_self_service": true,
+      "self_service_credit_needed": true
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Andy Annual",
+    "email": "andy@annualtomonthly.com",
+    "billing_address": {
+      "company": "AnnualToMonthly Inc",
+      "address_line_1": "365 Calendar Drive",
+      "city": "Minneapolis",
+      "state": "MN",
+      "postal_code": "55401",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Enterprise Conversion",
+  "billing_transition": {
+    "self_service_cancellation_date": "2024-10-31",
+    "credit_amount_due": 796,
+    "credit_calculation": "4 months remaining of annual plan: 2388 * (4/12) = 796",
+    "refund_calculation_method": "month_based_proration",
+    "new_billing_method": "invoice",
+    "first_invoice_date": "2024-11-01",
+    "refund_items": [
+      {
+        "item_type": "unused_annual_subscription",
+        "original_amount": 2388,
+        "period_start": "2024-03-01",
+        "period_end": "2025-02-28",
+        "months_total": 12,
+        "months_used": 8,
+        "months_remaining": 4,
+        "refund_amount": 796
+      }
+    ],
+    "transition_requirements": [
+      "Calculate prorated refund for remaining 4 months",
+      "Issue $796 refund to credit card",
+      "Cancel annual self-service subscription",
+      "Create new monthly enterprise subscription at $6,000/month",
+      "Ensure continuous service during transition"
+    ]
+  },
+  "conversion_notes": [
+    "Customer on annual self-service plan paid through Feb 2025",
+    "Converting mid-year with 4 months remaining",
+    "Prorated refund: $2,388 × (4/12) = $796",
+    "New enterprise plan: $6,000/month = $72,000/year",
+    "Significant upsell: from $2,388/year to $72,000/year"
+  ]
+}
+

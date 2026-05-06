@@ -1,0 +1,40 @@
+{
+  "id": "opp_edge_sameday",
+  "type": "new_business",
+  "account_name": "Emergency Services Inc",
+  "account_id": "acc_emergency_001",
+  "opportunity_name": "Emergency Services - Same Day Contract",
+  "close_date": "2024-10-15",
+  "amount": 5000,
+  "contract_start_date": "2024-10-15",
+  "contract_end_date": "2024-10-15",
+  "billing_frequency": "monthly",
+  "payment_terms": "due_on_receipt",
+  "line_items": [
+    {
+      "id": "li_same_001",
+      "product_name": "Emergency Consultation",
+      "product_code": "EMERGENCY_CONSULT",
+      "quantity": 1,
+      "unit_price": 5000,
+      "total_price": 5000,
+      "billing_period": "one_time",
+      "description": "Same-day emergency consulting engagement"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Urgent Urgentson",
+    "email": "urgent@emergencyservices.com",
+    "billing_address": {
+      "company": "Emergency Services Inc",
+      "address_line_1": "911 Quick Response Blvd",
+      "city": "Phoenix",
+      "state": "AZ",
+      "postal_code": "85001",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Rapid Response Team",
+  "notes": "One-day engagement. Invoice immediately upon completion."
+}
+

@@ -1,0 +1,40 @@
+{
+  "id": "opp_edge_yearboundary",
+  "type": "new_business",
+  "account_name": "NewYear Industries",
+  "account_id": "acc_newyear_001",
+  "opportunity_name": "NewYear - Dec to Jan Contract",
+  "close_date": "2024-12-15",
+  "amount": 3000,
+  "contract_start_date": "2024-12-25",
+  "contract_end_date": "2025-01-24",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_year_001",
+      "product_name": "Holiday Special Plan",
+      "product_code": "HOLIDAY_PLAN",
+      "quantity": 1,
+      "unit_price": 3000,
+      "total_price": 3000,
+      "billing_period": "monthly",
+      "description": "One month spanning year boundary"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Yolanda Yearend",
+    "email": "yolanda@newyear.com",
+    "billing_address": {
+      "company": "NewYear Industries",
+      "address_line_1": "2024 Transition Blvd",
+      "city": "Times Square",
+      "state": "NY",
+      "postal_code": "10036",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Holiday Team",
+  "notes": "Contract spans year boundary: Dec 25, 2024 - Jan 24, 2025. Tests date handling across calendar years."
+}
+

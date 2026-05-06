@@ -1,0 +1,40 @@
+{
+  "id": "opp_edge_net90",
+  "type": "new_business",
+  "account_name": "SlowPay Enterprises",
+  "account_id": "acc_slowpay_001",
+  "opportunity_name": "SlowPay - Extended Payment Terms",
+  "close_date": "2024-10-15",
+  "amount": 500000,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "annually",
+  "payment_terms": "net_90",
+  "line_items": [
+    {
+      "id": "li_net90_001",
+      "product_name": "Enterprise Platform",
+      "product_code": "ENT_PLAT",
+      "quantity": 1,
+      "unit_price": 500000,
+      "total_price": 500000,
+      "billing_period": "annually",
+      "description": "Enterprise platform - annual billing with 90-day payment terms"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Sally Slowpay",
+    "email": "sally@slowpay.com",
+    "billing_address": {
+      "company": "SlowPay Enterprises",
+      "address_line_1": "90 Extended Terms Avenue",
+      "city": "Tampa",
+      "state": "FL",
+      "postal_code": "33601",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Enterprise Finance",
+  "notes": "Net-90 payment terms: Payment due 90 days after invoice date. Large enterprise client with established credit. Approved by CFO."
+}
+

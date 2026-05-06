@@ -1,0 +1,160 @@
+{
+  "id": "opp_edge_multisub",
+  "type": "conversion_order",
+  "account_name": "MultiSub Technologies",
+  "account_id": "acc_multisub_001",
+  "recurly_account_code": "multi_sub_ss",
+  "opportunity_name": "MultiSub - Consolidate 5 Self-Service Subscriptions",
+  "close_date": "2024-10-15",
+  "amount": 120000,
+  "conversion_date": "2024-11-01",
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "existing_self_service": {
+    "subscriptions": [
+      {
+        "subscription_id": "sub_multi_001",
+        "plan_code": "basic_plan",
+        "monthly_amount": 49,
+        "current_period_start": "2024-10-15",
+        "current_period_end": "2024-11-14",
+        "days_remaining": 14
+      },
+      {
+        "subscription_id": "sub_multi_002",
+        "plan_code": "analytics_addon",
+        "monthly_amount": 29,
+        "current_period_start": "2024-10-20",
+        "current_period_end": "2024-11-19",
+        "days_remaining": 19
+      },
+      {
+        "subscription_id": "sub_multi_003",
+        "plan_code": "storage_addon",
+        "monthly_amount": 19,
+        "current_period_start": "2024-10-25",
+        "current_period_end": "2024-11-24",
+        "days_remaining": 24
+      },
+      {
+        "subscription_id": "sub_multi_004",
+        "plan_code": "api_addon",
+        "monthly_amount": 99,
+        "current_period_start": "2024-10-01",
+        "current_period_end": "2024-10-31",
+        "days_remaining": 0
+      },
+      {
+        "subscription_id": "sub_multi_005",
+        "plan_code": "support_addon",
+        "monthly_amount": 149,
+        "current_period_start": "2024-10-10",
+        "current_period_end": "2024-11-09",
+        "days_remaining": 9
+      }
+    ],
+    "total_monthly": 345,
+    "payment_method": "credit_card"
+  },
+  "line_items": [
+    {
+      "id": "li_multi_001",
+      "product_name": "Enterprise All-In-One Bundle",
+      "product_code": "ENT_BUNDLE",
+      "quantity": 1,
+      "unit_price": 10000,
+      "total_price": 120000,
+      "billing_period": "monthly",
+      "description": "Consolidates all 5 self-service subscriptions into one enterprise plan",
+      "replaces_self_service": true,
+      "self_service_credit_needed": true
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Multiple Mike",
+    "email": "mike@multisubtech.com",
+    "billing_address": {
+      "company": "MultiSub Technologies",
+      "address_line_1": "5 Subscription Circle",
+      "city": "Denver",
+      "state": "CO",
+      "postal_code": "80202",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Enterprise Consolidation",
+  "billing_transition": {
+    "self_service_cancellation_date": "2024-10-31",
+    "credit_amount_due": 77.03,
+    "credit_calculation": "Sum of prorated refunds for each subscription's remaining days",
+    "refund_calculation_method": "day_based_proration",
+    "new_billing_method": "invoice",
+    "first_invoice_date": "2024-11-01",
+    "subscriptions_to_cancel": [
+      "sub_multi_001",
+      "sub_multi_002",
+      "sub_multi_003",
+      "sub_multi_004",
+      "sub_multi_005"
+    ],
+    "refund_items": [
+      {
+        "subscription_id": "sub_multi_001",
+        "plan_code": "basic_plan",
+        "days_unused": 14,
+        "days_in_period": 31,
+        "original_amount": 49,
+        "refund_amount": 22.13
+      },
+      {
+        "subscription_id": "sub_multi_002",
+        "plan_code": "analytics_addon",
+        "days_unused": 19,
+        "days_in_period": 31,
+        "original_amount": 29,
+        "refund_amount": 17.77
+      },
+      {
+        "subscription_id": "sub_multi_003",
+        "plan_code": "storage_addon",
+        "days_unused": 24,
+        "days_in_period": 31,
+        "original_amount": 19,
+        "refund_amount": 14.71
+      },
+      {
+        "subscription_id": "sub_multi_004",
+        "plan_code": "api_addon",
+        "days_unused": 0,
+        "days_in_period": 31,
+        "original_amount": 99,
+        "refund_amount": 0
+      },
+      {
+        "subscription_id": "sub_multi_005",
+        "plan_code": "support_addon",
+        "days_unused": 9,
+        "days_in_period": 31,
+        "original_amount": 149,
+        "refund_amount": 43.26
+      }
+    ],
+    "transition_requirements": [
+      "Cancel all 5 self-service subscriptions",
+      "Calculate individual prorated refunds",
+      "Issue total refund of $77.03",
+      "Create single enterprise bundle subscription",
+      "First invoice for $10,000 on November 1"
+    ]
+  },
+  "conversion_notes": [
+    "Customer has 5 separate self-service subscriptions",
+    "Each has different billing cycle - complex proration",
+    "Consolidating into single $10,000/month enterprise bundle",
+    "Total previous spend: $345/month → New: $10,000/month",
+    "29x upsell achieved through consolidation"
+  ]
+}
+

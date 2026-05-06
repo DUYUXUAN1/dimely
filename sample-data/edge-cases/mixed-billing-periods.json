@@ -1,0 +1,80 @@
+{
+  "id": "opp_edge_mixed",
+  "type": "new_business",
+  "account_name": "Complex Billing Corp",
+  "account_id": "acc_complex_001",
+  "opportunity_name": "Complex Billing Corp - Mixed Period Subscription",
+  "close_date": "2024-10-15",
+  "amount": 84000,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_mix_001",
+      "product_name": "Core Platform",
+      "product_code": "CORE_MONTHLY",
+      "quantity": 1,
+      "unit_price": 2000,
+      "total_price": 24000,
+      "billing_period": "monthly",
+      "description": "Core platform billed monthly"
+    },
+    {
+      "id": "li_mix_002",
+      "product_name": "Quarterly Reports Package",
+      "product_code": "REPORTS_QUARTERLY",
+      "quantity": 1,
+      "unit_price": 6000,
+      "total_price": 24000,
+      "billing_period": "quarterly",
+      "description": "Executive reports package billed quarterly"
+    },
+    {
+      "id": "li_mix_003",
+      "product_name": "Annual Support Contract",
+      "product_code": "SUPPORT_ANNUAL",
+      "quantity": 1,
+      "unit_price": 18000,
+      "total_price": 18000,
+      "billing_period": "annually",
+      "description": "Premium support billed annually upfront"
+    },
+    {
+      "id": "li_mix_004",
+      "product_name": "Onboarding Fee",
+      "product_code": "ONBOARD_FEE",
+      "quantity": 1,
+      "unit_price": 8000,
+      "total_price": 8000,
+      "billing_period": "one_time",
+      "description": "One-time onboarding and setup"
+    },
+    {
+      "id": "li_mix_005",
+      "product_name": "Training Sessions",
+      "product_code": "TRAINING",
+      "quantity": 20,
+      "unit_price": 500,
+      "total_price": 10000,
+      "billing_period": "one_time",
+      "description": "20 training sessions at $500 each"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Billy Billingsworth",
+    "email": "billy@complexbilling.com",
+    "billing_address": {
+      "company": "Complex Billing Corp",
+      "address_line_1": "777 Invoice Avenue",
+      "city": "Seattle",
+      "state": "WA",
+      "postal_code": "98101",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Billing Specialists",
+  "notes": "Complex billing scenario with monthly, quarterly, annual, and one-time items. Ensure proper invoice scheduling."
+}
+

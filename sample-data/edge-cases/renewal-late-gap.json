@@ -1,0 +1,55 @@
+{
+  "id": "opp_edge_lategap",
+  "type": "renewal",
+  "account_name": "LateRenewal Inc",
+  "account_id": "acc_late_001",
+  "recurly_account_code": "late_renewal",
+  "opportunity_name": "LateRenewal - 45 Day Service Gap",
+  "close_date": "2025-02-15",
+  "amount": 60000,
+  "contract_start_date": "2025-02-15",
+  "contract_end_date": "2026-02-14",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "previous_contract": {
+    "id": "contract_late_2024",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "annual_value": 60000,
+    "expired_date": "2024-12-31",
+    "days_since_expiration": 46
+  },
+  "line_items": [
+    {
+      "id": "li_late_001",
+      "product_name": "Professional Plan",
+      "product_code": "PRO_PLAN",
+      "quantity": 1,
+      "unit_price": 5000,
+      "total_price": 60000,
+      "billing_period": "monthly",
+      "description": "Professional plan - late renewal after 45 day gap"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Larry Late",
+    "email": "larry@laterenewal.com",
+    "billing_address": {
+      "company": "LateRenewal Inc",
+      "address_line_1": "456 Procrastination Place",
+      "city": "Los Angeles",
+      "state": "CA",
+      "postal_code": "90001",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Win-Back Team",
+  "renewal_notes": [
+    "Contract expired December 31, 2024",
+    "Customer had 46-day service gap",
+    "Data preserved under grace period policy",
+    "No backfill billing for gap period",
+    "Win-back with same terms as previous contract"
+  ]
+}
+

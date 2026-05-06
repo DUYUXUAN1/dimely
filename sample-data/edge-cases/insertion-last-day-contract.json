@@ -1,0 +1,55 @@
+{
+  "id": "opp_edge_lastday",
+  "type": "insertion_order",
+  "account_name": "LastMinute Corp",
+  "account_id": "acc_lastmin_001",
+  "recurly_account_code": "last_minute",
+  "opportunity_name": "LastMinute - Final Day Upsell",
+  "close_date": "2024-12-31",
+  "amount": 5000,
+  "contract_start_date": "2024-12-31",
+  "contract_end_date": "2024-12-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "due_on_receipt",
+  "existing_contract": {
+    "id": "contract_lastmin_2024",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "remaining_days": 1,
+    "remaining_months": 0
+  },
+  "line_items": [
+    {
+      "id": "li_last_001",
+      "product_name": "Emergency Data Export",
+      "product_code": "DATA_EXPORT",
+      "quantity": 1,
+      "unit_price": 5000,
+      "total_price": 5000,
+      "billing_period": "one_time",
+      "description": "Emergency data export service - same day delivery",
+      "proration_needed": false,
+      "immediate_invoice": true
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Minnie Minute",
+    "email": "minnie@lastminute.com",
+    "billing_address": {
+      "company": "LastMinute Corp",
+      "address_line_1": "1159 PM Street",
+      "city": "Las Vegas",
+      "state": "NV",
+      "postal_code": "89101",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Urgent Team",
+  "insertion_notes": [
+    "Customer requested emergency data export on contract's final day",
+    "One-time charge - no proration needed",
+    "Invoice immediately - payment due on receipt",
+    "Customer renewing in new contract starting January 1"
+  ]
+}
+

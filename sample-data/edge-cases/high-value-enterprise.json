@@ -1,0 +1,71 @@
+{
+  "id": "opp_edge_enterprise",
+  "type": "new_business",
+  "account_name": "MegaCorp Global Industries",
+  "account_id": "acc_mega_001",
+  "opportunity_name": "MegaCorp - Enterprise Platform Deal",
+  "close_date": "2024-10-15",
+  "amount": 2500000,
+  "contract_start_date": "2025-01-01",
+  "contract_end_date": "2027-12-31",
+  "billing_frequency": "annually",
+  "payment_terms": "net_60",
+  "line_items": [
+    {
+      "id": "li_ent_001",
+      "product_name": "Enterprise Platform License",
+      "product_code": "ENT_PLATFORM",
+      "quantity": 1,
+      "unit_price": 500000,
+      "total_price": 1500000,
+      "billing_period": "annually",
+      "description": "Unlimited enterprise platform access for 3 years"
+    },
+    {
+      "id": "li_ent_002",
+      "product_name": "Premium Support Package",
+      "product_code": "PREM_SUPPORT",
+      "quantity": 1,
+      "unit_price": 150000,
+      "total_price": 450000,
+      "billing_period": "annually",
+      "description": "24/7 dedicated support team"
+    },
+    {
+      "id": "li_ent_003",
+      "product_name": "Implementation Services",
+      "product_code": "IMPL_ENT",
+      "quantity": 1,
+      "unit_price": 350000,
+      "total_price": 350000,
+      "billing_period": "one_time",
+      "description": "Full enterprise implementation with dedicated team"
+    },
+    {
+      "id": "li_ent_004",
+      "product_name": "Training Program",
+      "product_code": "TRAINING_ENT",
+      "quantity": 500,
+      "unit_price": 400,
+      "total_price": 200000,
+      "billing_period": "one_time",
+      "description": "500 user training sessions"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Victoria Sterling",
+    "email": "v.sterling@megacorp.com",
+    "billing_address": {
+      "company": "MegaCorp Global Industries",
+      "address_line_1": "One MegaCorp Plaza",
+      "address_line_2": "Executive Floor",
+      "city": "New York",
+      "state": "NY",
+      "postal_code": "10001",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Senior Account Executive",
+  "notes": "Strategic enterprise deal. CFO approval obtained. Multi-year commitment with annual billing."
+}
+

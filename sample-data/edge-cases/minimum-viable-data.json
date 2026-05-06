@@ -1,0 +1,39 @@
+{
+  "id": "opp_min",
+  "type": "new_business",
+  "account_name": "Min",
+  "account_id": "a",
+  "opportunity_name": "M",
+  "close_date": "2024-01-01",
+  "amount": 1,
+  "contract_start_date": "2024-01-01",
+  "contract_end_date": "2024-01-01",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "l",
+      "product_name": "P",
+      "product_code": "P",
+      "quantity": 1,
+      "unit_price": 1,
+      "total_price": 1,
+      "billing_period": "one_time",
+      "description": "D"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "A",
+    "email": "a@b.c",
+    "billing_address": {
+      "company": "M",
+      "address_line_1": "1",
+      "city": "C",
+      "state": "CA",
+      "postal_code": "1",
+      "country": "US"
+    }
+  },
+  "sales_rep": "S"
+}
+

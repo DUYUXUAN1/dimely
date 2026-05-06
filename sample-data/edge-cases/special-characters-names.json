@@ -1,0 +1,51 @@
+{
+  "id": "opp_edge_special",
+  "type": "new_business",
+  "account_name": "O'Reilly & Associates (UK) Ltd. — División Española",
+  "account_id": "acc_oreilly_001",
+  "opportunity_name": "O'Reilly & Associates — «Enterprise» License [2024–2025]",
+  "close_date": "2024-10-15",
+  "amount": 50000,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "quarterly",
+  "payment_terms": "net_45",
+  "line_items": [
+    {
+      "id": "li_special_001",
+      "product_name": "Platform License — \"Enterprise Edition\"",
+      "product_code": "PLAT_ENT",
+      "quantity": 1,
+      "unit_price": 10000,
+      "total_price": 40000,
+      "billing_period": "quarterly",
+      "description": "Enterprise platform — includes: analytics, reporting & API access"
+    },
+    {
+      "id": "li_special_002",
+      "product_name": "Setup Fee (one-time)",
+      "product_code": "SETUP_FEE",
+      "quantity": 1,
+      "unit_price": 10000,
+      "total_price": 10000,
+      "billing_period": "one_time",
+      "description": "Initial setup & configuration — 40 hours @ $250/hr"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "François-Marie O'Brien-García",
+    "email": "francois-marie.obrien-garcia@oreilly-associates.co.uk",
+    "billing_address": {
+      "company": "O'Reilly & Associates (UK) Ltd.",
+      "address_line_1": "123 King's Road — Building «A»",
+      "address_line_2": "Floor 3½, Suite 42",
+      "city": "London",
+      "state": "Greater London",
+      "postal_code": "SW3 4ND",
+      "country": "GB"
+    }
+  },
+  "sales_rep": "María José López-Hernández",
+  "notes": "Special characters test: apostrophes, ampersands, em-dashes, guillemets, quotes, hyphens, fractions. Handle with care!"
+}
+

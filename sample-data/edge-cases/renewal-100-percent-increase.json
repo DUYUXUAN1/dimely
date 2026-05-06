@@ -1,0 +1,54 @@
+{
+  "id": "opp_edge_bigrise",
+  "type": "renewal",
+  "account_name": "GrowthRocket Inc",
+  "account_id": "acc_growth_001",
+  "recurly_account_code": "growth_rocket",
+  "opportunity_name": "GrowthRocket - 100% Price Increase Renewal",
+  "close_date": "2024-10-15",
+  "amount": 240000,
+  "contract_start_date": "2025-01-01",
+  "contract_end_date": "2025-12-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "previous_contract": {
+    "id": "contract_growth_2024",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "annual_value": 120000
+  },
+  "line_items": [
+    {
+      "id": "li_grow_001",
+      "product_name": "Enterprise Platform",
+      "product_code": "ENT_PLATFORM",
+      "quantity": 1,
+      "unit_price": 20000,
+      "total_price": 240000,
+      "billing_period": "monthly",
+      "description": "Enterprise platform - doubled due to 10x usage growth",
+      "previous_price": 10000,
+      "price_change_reason": "Usage tier upgrade from Tier 2 to Tier 4"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Rocket Rocketson",
+    "email": "rocket@growthrocket.io",
+    "billing_address": {
+      "company": "GrowthRocket Inc",
+      "address_line_1": "200 Hypergrowth Lane",
+      "city": "San Francisco",
+      "state": "CA",
+      "postal_code": "94105",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Enterprise Team",
+  "renewal_notes": [
+    "Customer experienced 10x growth in usage",
+    "Moving from Tier 2 to Tier 4 pricing",
+    "100% price increase approved by customer CFO",
+    "Customer requested monthly billing to manage cash flow"
+  ]
+}
+

@@ -1,0 +1,40 @@
+{
+  "id": "opp_edge_future",
+  "type": "new_business",
+  "account_name": "FuturePlan Inc",
+  "account_id": "acc_future_001",
+  "opportunity_name": "FuturePlan - 6 Month Delayed Start",
+  "close_date": "2024-10-15",
+  "amount": 60000,
+  "contract_start_date": "2025-04-01",
+  "contract_end_date": "2026-03-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [
+    {
+      "id": "li_future_001",
+      "product_name": "Professional Plan",
+      "product_code": "PRO_PLAN",
+      "quantity": 1,
+      "unit_price": 5000,
+      "total_price": 60000,
+      "billing_period": "monthly",
+      "description": "Professional plan - delayed start for Q2 2025"
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Forrest Future",
+    "email": "forrest@futureplan.com",
+    "billing_address": {
+      "company": "FuturePlan Inc",
+      "address_line_1": "2025 Tomorrow Blvd",
+      "city": "San Jose",
+      "state": "CA",
+      "postal_code": "95110",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Strategic Deals",
+  "notes": "Contract signed in October 2024 but starts April 2025 (6 months later). Customer budget available Q2 2025. No billing until April 1, 2025."
+}
+

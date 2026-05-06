@@ -1,0 +1,29 @@
+{
+  "id": "opp_edge_zero",
+  "type": "new_business",
+  "account_name": "Pilot Program Inc",
+  "account_id": "acc_pilot_001",
+  "opportunity_name": "Pilot Program Inc - Free Trial",
+  "close_date": "2024-10-15",
+  "amount": 0,
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-01-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "line_items": [],
+  "contact_info": {
+    "primary_contact": "Alex Trial",
+    "email": "alex@pilotprogram.com",
+    "billing_address": {
+      "company": "Pilot Program Inc",
+      "address_line_1": "100 Free Way",
+      "city": "San Francisco",
+      "state": "CA",
+      "postal_code": "94105",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Trial Team",
+  "notes": "3-month free pilot program. No billing required during trial period."
+}
+

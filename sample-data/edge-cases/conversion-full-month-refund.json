@@ -1,0 +1,82 @@
+{
+  "id": "opp_edge_fullrefund",
+  "type": "conversion_order",
+  "account_name": "FullRefund Corp",
+  "account_id": "acc_fullref_001",
+  "recurly_account_code": "full_refund_ss",
+  "opportunity_name": "FullRefund - Complete Month Credit",
+  "close_date": "2024-10-31",
+  "amount": 48000,
+  "conversion_date": "2024-11-01",
+  "contract_start_date": "2024-11-01",
+  "contract_end_date": "2025-10-31",
+  "billing_frequency": "monthly",
+  "payment_terms": "net_30",
+  "existing_self_service": {
+    "plan_code": "growth_plan",
+    "monthly_amount": 499,
+    "current_period_start": "2024-11-01",
+    "current_period_end": "2024-11-30",
+    "subscription_id": "sub_fullref_ss_001",
+    "started_date": "2022-03-01",
+    "payment_method": "credit_card",
+    "billed_on": "2024-11-01"
+  },
+  "line_items": [
+    {
+      "id": "li_fullref_001",
+      "product_name": "Professional Plan",
+      "product_code": "PRO_PLAN",
+      "quantity": 1,
+      "unit_price": 4000,
+      "total_price": 48000,
+      "billing_period": "monthly",
+      "description": "Professional plan with dedicated support",
+      "replaces_self_service": true,
+      "self_service_credit_needed": true
+    }
+  ],
+  "contact_info": {
+    "primary_contact": "Refund Randy",
+    "email": "randy@fullrefund.com",
+    "billing_address": {
+      "company": "FullRefund Corp",
+      "address_line_1": "100 Credit Street",
+      "city": "San Diego",
+      "state": "CA",
+      "postal_code": "92101",
+      "country": "US"
+    }
+  },
+  "sales_rep": "Conversion Team",
+  "billing_transition": {
+    "self_service_cancellation_date": "2024-11-01",
+    "credit_amount_due": 499,
+    "credit_calculation": "Full month refund - customer just billed for November",
+    "refund_calculation_method": "full_period",
+    "new_billing_method": "invoice",
+    "first_invoice_date": "2024-11-01",
+    "refund_items": [
+      {
+        "item_type": "unused_subscription_time",
+        "original_amount": 499,
+        "days_unused": 30,
+        "days_in_period": 30,
+        "refund_amount": 499
+      }
+    ],
+    "transition_requirements": [
+      "Issue full refund of $499 to credit card",
+      "Cancel self-service subscription immediately",
+      "Create new professional subscription",
+      "First invoice for $4,000 due November 30"
+    ]
+  },
+  "conversion_notes": [
+    "Customer was just billed for November on self-service",
+    "Full month refund required - $499",
+    "Immediate conversion to professional plan",
+    "Net cost to customer this month: $4,000 - $499 = $3,501"
+  ]
+}
+

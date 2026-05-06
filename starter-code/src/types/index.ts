@@ -1,0 +1,229 @@
+// Core order types
+export type OrderType = 'new_business' | 'conversion_order';
+
+/**
+ * LineItem represents a single product/service in an opportunity.
+ * 
+ * PRICING CONVENTIONS:
+ * - `unit_price`: The price per unit per billing period (e.g., monthly rate)
+ * - `total_price`: The total contract value for this line item
+ * 
+ * VALIDATION RULES:
+ * - For `one_time` items: total_price = quantity × unit_price
+ * - For recurring items (monthly/quarterly/annually): 
+ *   total_price = quantity × unit_price × number_of_periods_in_contract
+ *   Example: $1,000/month × 12 months = $12,000 total_price
+ * 
+ * The opportunity's `amount` should equal the sum of all line items' `total_price`.
+ */
+export interface LineItem {
+  id: string;
+  product_name: string;
+  product_code: string;
+  /** Number of units purchased */
+  quantity: number;
+  /** Price per unit per billing period (e.g., monthly rate for monthly billing) */
+  unit_price: number;
+  /** Total contract value for this line item (see pricing conventions above) */
+  total_price: number;
+  billing_period: 'monthly' | 'quarterly' | 'annually' | 'one_time';
+  description: string;
+  // Line item classification for billing logic
+  item_classification?: 'subscription_consumption' | 'non_subscription_consumption' | 'one_time_service';
+  // Optional fields for specific scenarios
+  previous_price?: number;
+  price_change_reason?: string;
+  is_new_product?: boolean;
+  proration_needed?: boolean;
+  months_remaining?: number;
+  affects_base_subscription?: boolean;
+  immediate_invoice?: boolean;
+  replaces_self_service?: boolean;
+  self_service_credit_needed?: boolean;
+  is_new_service?: boolean;
+}
+
+export interface ContactInfo {
+  primary_contact: string;
+  email: string;
+  billing_address: {
+    company: string;
+    address_line_1: string;
+    address_line_2?: string;
+    city: string;
+    state: string;
+    postal_code: string;
+    country: string;
+  };
+}
+
+/**
+ * Opportunity represents a sales deal that needs billing actions.
+ * 
+ * VALIDATION RULES:
+ * - `amount` must equal the sum of all line_items' total_price values
+ * - `contract_end_date` must be after `contract_start_date`
+ * - For conversion orders: `recurly_account_code`, `existing_self_service`, and `billing_transition` are required
+ */
+export interface Opportunity {
+  id: string;
+  type: OrderType;
+  account_name: string;
+  account_id: string;
+  /** Required for conversion_order types */
+  recurly_account_code?: string;
+  opportunity_name: string;
+  close_date: string;
+  /** Total contract value - must equal sum of all line_items.total_price */
+  amount: number;
+  contract_start_date: string;
+  contract_end_date: string;
+  billing_frequency: 'monthly' | 'quarterly' | 'annually';
+  payment_terms: string;
+  line_items: LineItem[];
+  contact_info: ContactInfo;
+  sales_rep: string;
+  notes?: string;
+  conversion_date?: string;
+  // Order-specific fields
+  previous_contract?: any;
+  existing_contract?: any;
+  existing_self_service?: any;
+  renewal_notes?: string[];
+  conversion_notes?: string[];
+  proration_details?: any;
+  billing_transition?: any;
+  outstanding_invoices?: any;
+}
+
+// Recurly API response types
+export interface RecurlyAccount {
+  account_code: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  company_name: string;
+  state: 'active' | 'closed' | 'past_due';
+  created_at: string;
+  updated_at: string;
+  billing_info?: {
+    payment_method: string;
+    card_type?: string;
+    last_four?: string;
+    exp_month?: number;
+    exp_year?: number;
+  };
+  address?: {
+    address1: string;
+    address2?: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+}
+
+export interface RecurlySubscription {
+  uuid: string;
+  plan_code: string;
+  state: 'active' | 'canceled' | 'expired' | 'future' | 'in_trial' | 'live' | 'paused' | 'past_due';
+  unit_amount_in_cents: number;
+  quantity: number;
+  current_period_started_at: string;
+  current_period_ends_at: string;
+  started_at: string;
+  expires_at?: string;
+  collection_method: 'automatic' | 'manual';
+  net_terms: number;
+  add_ons?: Array<{
+    add_on_code: string;
+    quantity: number;
+    unit_amount_in_cents: number;
+  }>;
+}
+
+export interface RecurlyInvoice {
+  invoice_number: string;
+  state: 'pending' | 'processing' | 'past_due' | 'paid' | 'failed' | 'voided';
+  total_in_cents: number;
+  created_at: string;
+  due_at: string;
+  closed_at?: string;
+  line_items: Array<{
+    type: 'plan' | 'add_on' | 'adjustment' | 'credit';
+    description: string;
+    amount_in_cents: number;
+    plan_code?: string;
+    add_on_code?: string;
+  }>;
+}
+
+export interface RecurlyState {
+  account: RecurlyAccount;
+  subscriptions: RecurlySubscription[];
+  invoices: RecurlyInvoice[];
+  transactions: Array<{
+    type: string;
+    action: string;
+    amount_in_cents: number;
+    status: 'success' | 'failed' | 'void' | 'pending';
+    created_at: string;
+    invoice_number?: string;
+  }>;
+  credits?: Array<{
+    type: string;
+    amount_in_cents: number;
+    description: string;
+  }>;
+}
+
+// Billing action types for output
+export type BillingActionType = 
+  | 'create_account'
+  | 'update_account'
+  | 'create_subscription'
+  | 'update_subscription'
+  | 'cancel_subscription'
+  | 'create_invoice'
+  | 'apply_credit'
+  | 'charge_one_time'
+  | 'prorate_charges';
+
+export interface BillingAction {
+  type: BillingActionType;
+  description: string;
+  details: Record<string, any>;
+  amount_in_cents?: number;
+  effective_date?: string;
+  requires_review: boolean;
+  risk_level: 'low' | 'medium' | 'high';
+  notes?: string[];
+}
+
+export interface ReviewSheet {
+  opportunity_id: string;
+  opportunity_name: string;
+  account_name: string;
+  total_actions: number;
+  high_risk_actions: number;
+  estimated_total_impact: number;
+  billing_actions: BillingAction[];
+  summary: string;
+  warnings: string[];
+  manual_review_required: boolean;
+  generated_at: string;
+}
+
+// Error handling types
+export interface ValidationError {
+  field: string;
+  message: string;
+  value?: any;
+}
+
+export interface ProcessingResult {
+  success: boolean;
+  review_sheet?: ReviewSheet;
+  errors?: ValidationError[];
+  warnings?: string[];
+}
