@@ -6,8 +6,8 @@ const LineItemSchema = z.object({
   product_name: z.string(),
   product_code: z.string(),
   quantity: z.number().positive(),
-  unit_price: z.number().nonnegative(),
-  total_price: z.number().nonnegative(),
+  unit_price: z.number(),
+  total_price: z.number(),
   billing_period: z.enum(['monthly', 'quarterly', 'annually', 'one_time']),
   description: z.string(),
   previous_price: z.number().optional(),
@@ -25,7 +25,7 @@ const LineItemSchema = z.object({
 
 const ContactInfoSchema = z.object({
   primary_contact: z.string(),
-  email: z.string().email(),
+  email: z.string().regex(/^[^@\s]+@[^@\s]+\.[^@\s]+$/, 'Invalid email format'),
   billing_address: z.object({
     company: z.string(),
     address_line_1: z.string(),
@@ -39,13 +39,13 @@ const ContactInfoSchema = z.object({
 
 const OpportunitySchema = z.object({
   id: z.string(),
-  type: z.enum(['new_business', 'conversion_order']),
+  type: z.enum(['new_business', 'conversion_order', 'renewal', 'insertion_order']),
   account_name: z.string(),
   account_id: z.string(),
   recurly_account_code: z.string().optional(),
   opportunity_name: z.string(),
   close_date: z.string(),
-  amount: z.number().nonnegative(),
+  amount: z.number(),
   contract_start_date: z.string(),
   contract_end_date: z.string(),
   billing_frequency: z.enum(['monthly', 'quarterly', 'annually']),
@@ -73,11 +73,16 @@ const OpportunitySchema = z.object({
  * Calculate the number of months between two dates
  */
 function getContractMonths(startDate: string, endDate: string): number {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
+  const start = parseDateParts(startDate);
+  const end = parseDateParts(endDate);
   const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
   // Add 1 because contract includes both start and end months
   return months + 1;
+}
+
+function parseDateParts(value: string): Date {
+  const [year, month, day] = value.split('-').map(Number);
+  return new Date(year, (month || 1) - 1, day || 1);
 }
 
 /**
@@ -148,13 +153,13 @@ function validateAmountSum(
  * Validate that contract end date is after start date
  */
 function validateDates(startDate: string, endDate: string): ValidationError | null {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
+  const start = parseDateParts(startDate);
+  const end = parseDateParts(endDate);
   
-  if (end <= start) {
+  if (end < start) {
     return {
       field: 'contract_end_date',
-      message: 'Contract end date must be after start date',
+      message: 'Contract end date must be on or after start date',
       value: { start: startDate, end: endDate },
     };
   }
@@ -208,24 +213,81 @@ export class OpportunityParser {
         if (mathError) errors.push(mathError);
       }
       
-      // ============================================================
-      // TODO: Add your additional validations here
-      // ============================================================
-      // 
-      // You should add validation for:
-      // 1. Order-type specific requirements:
-      //    - conversion_order requires: recurly_account_code, existing_self_service, billing_transition
-      // 
-      // 2. Logical consistency:
-      //    - is_new_service + replaces_self_service = contradiction
-      //    - Refund calculations in billing_transition (days_in_period, refund_amount)
-      //
-      // Example:
-      // if (opportunity.type === 'conversion_order') {
-      //   if (!opportunity.recurly_account_code) {
-      //     errors.push({ field: 'recurly_account_code', message: '...' });
-      //   }
-      // }
+      if (opportunity.type === 'conversion_order') {
+        if (!opportunity.recurly_account_code) {
+          errors.push({
+            field: 'recurly_account_code',
+            message: 'conversion_order requires recurly_account_code',
+          });
+        }
+        if (!opportunity.existing_self_service) {
+          errors.push({
+            field: 'existing_self_service',
+            message: 'conversion_order requires existing_self_service',
+          });
+        }
+        if (!opportunity.billing_transition) {
+          errors.push({
+            field: 'billing_transition',
+            message: 'conversion_order requires billing_transition',
+          });
+        }
+      }
+
+      for (const item of opportunity.line_items) {
+        if (item.is_new_service && item.replaces_self_service) {
+          errors.push({
+            field: `line_items.${item.id}`,
+            message: 'Line item cannot be both is_new_service and replaces_self_service',
+            value: item,
+          });
+        }
+      }
+
+      const refundItems = opportunity.billing_transition?.refund_items;
+      if (Array.isArray(refundItems)) {
+        for (let index = 0; index < refundItems.length; index++) {
+          const refundItem = refundItems[index];
+          const { original_amount, days_unused, days_in_period, refund_amount } = refundItem || {};
+
+          if (
+            typeof original_amount !== 'number' ||
+            typeof days_unused !== 'number' ||
+            typeof days_in_period !== 'number' ||
+            typeof refund_amount !== 'number'
+          ) {
+            continue;
+          }
+
+          if (opportunity.existing_self_service?.current_period_start) {
+            const periodStart = new Date(opportunity.existing_self_service.current_period_start);
+            if (!Number.isNaN(periodStart.getTime())) {
+              const actualDaysInMonth = new Date(
+                periodStart.getFullYear(),
+                periodStart.getMonth() + 1,
+                0
+              ).getDate();
+
+              if (actualDaysInMonth !== days_in_period) {
+                errors.push({
+                  field: `billing_transition.refund_items.${index}.days_in_period`,
+                  message: `Refund days_in_period mismatch: expected ${actualDaysInMonth}, got ${days_in_period}`,
+                  value: days_in_period,
+                });
+              }
+            }
+          }
+
+          const expectedRefund = Number(((original_amount * days_unused) / days_in_period).toFixed(2));
+          if (Math.abs(refund_amount - expectedRefund) > 0.01) {
+            errors.push({
+              field: `billing_transition.refund_items.${index}.refund_amount`,
+              message: `Refund amount mismatch: expected ${expectedRefund}, got ${refund_amount}`,
+              value: refund_amount,
+            });
+          }
+        }
+      }
       
       if (errors.length > 0) {
         return { opportunity, errors };
@@ -242,4 +304,4 @@ export class OpportunityParser {
       return { errors };
     }
   }
-}
+} 

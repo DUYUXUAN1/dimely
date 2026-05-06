@@ -36,20 +36,16 @@ export class Dimely {
     try {
       // 1. Parse and validate opportunity
       const { opportunity, errors } = this.parser.parse(opportunityData);
-      
-      if (errors.length > 0) {
-        console.error('❌ Opportunity validation failed:', errors);
-        return {
-          success: false,
-          errors,
-        };
-      }
 
       if (!opportunity) {
         return {
           success: false,
           errors: [{ field: 'root', message: 'Failed to parse opportunity' }],
         };
+      }
+
+      if (errors.length > 0) {
+        console.warn('⚠️ Opportunity validation issues detected; continuing with manual review required:', errors);
       }
 
       console.log(`✅ Parsed ${opportunity.type} opportunity: ${opportunity.opportunity_name}`);
@@ -71,14 +67,14 @@ export class Dimely {
       
       // 4. Create review sheet
       console.log('📋 Generating review sheet...');
-      const reviewSheet = this.outputGenerator.generateReviewSheet(opportunity, billingActions);
+      const reviewSheet = this.outputGenerator.generateReviewSheet(opportunity, billingActions, errors);
       
       console.log(`✅ Generated ${billingActions.length} billing actions for review`);
       
       return {
         success: true,
         review_sheet: reviewSheet,
-        warnings: [],
+        warnings: errors.map((error) => `${error.field}: ${error.message}`),
       };
 
     } catch (error) {
@@ -166,4 +162,4 @@ async function main() {
 // Only run main if this file is executed directly
 if (require.main === module) {
   main().catch(console.error);
-}
+} 

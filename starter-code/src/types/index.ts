@@ -1,5 +1,5 @@
 // Core order types
-export type OrderType = 'new_business' | 'conversion_order';
+export type OrderType = 'new_business' | 'conversion_order' | 'renewal' | 'insertion_order';
 
 /**
  * LineItem represents a single product/service in an opportunity.
@@ -226,4 +226,4 @@ export interface ProcessingResult {
   review_sheet?: ReviewSheet;
   errors?: ValidationError[];
   warnings?: string[];
-}
+} 
