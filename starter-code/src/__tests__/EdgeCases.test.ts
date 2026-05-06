@@ -80,9 +80,7 @@ function assertScenarioSpecificBehavior(file: string, sheet: ReviewSheet): void 
 
   if (file.startsWith('conversion-')) {
     expect(hasAction(actions, 'create_subscription')).toBe(true);
-    if (file !== 'conversion-backdated.json' && file !== 'conversion-same-day.json') {
-      expect(hasAction(actions, 'update_account')).toBe(true);
-    }
+    expect(hasAction(actions, 'update_account')).toBe(true);
   }
 
   if (file === 'conversion-full-month-refund.json' || file === 'conversion-order-opportunity.json') {

@@ -100,7 +100,8 @@ export class BillingEngine {
       }
 
       const newBillingMethod = opportunity.billing_transition?.new_billing_method;
-      if (newBillingMethod === 'invoice') {
+      const shouldSwitchToInvoice = !newBillingMethod || newBillingMethod === 'invoice';
+      if (shouldSwitchToInvoice) {
         actions.push(
           applyRisk({
             type: 'update_account',
