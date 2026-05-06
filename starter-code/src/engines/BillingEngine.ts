@@ -58,21 +58,89 @@ export class BillingEngine {
 
     if (opportunity.type === 'conversion_order') {
       const activeSubscriptions = (recurlyState?.subscriptions || []).filter((sub) => sub.state === 'active');
+      const cancellationDate =
+        opportunity.billing_transition?.self_service_cancellation_date || opportunity.contract_start_date;
+      const cancelledSubscriptionIds = new Set<string>();
+
       for (const subscription of activeSubscriptions) {
+        cancelledSubscriptionIds.add(subscription.uuid);
         actions.push(
           applyRisk({
             type: 'cancel_subscription',
             description: `Cancel self-service subscription ${subscription.plan_code}`,
             details: {
               subscription_uuid: subscription.uuid,
-              cancel_at:
-                opportunity.billing_transition?.self_service_cancellation_date ||
-                opportunity.contract_start_date,
+              cancel_at: cancellationDate,
               refund_type: 'prorated',
             },
-            effective_date:
-              opportunity.billing_transition?.self_service_cancellation_date ||
-              opportunity.contract_start_date,
+            effective_date: cancellationDate,
+            requires_review: false,
+            risk_level: 'medium',
+          })
+        );
+      }
+
+      const fallbackSubscriptionId = opportunity.existing_self_service?.subscription_id;
+      if (typeof fallbackSubscriptionId === 'string' && fallbackSubscriptionId && !cancelledSubscriptionIds.has(fallbackSubscriptionId)) {
+        actions.push(
+          applyRisk({
+            type: 'cancel_subscription',
+            description: `Cancel self-service subscription ${opportunity.existing_self_service?.plan_code || fallbackSubscriptionId}`,
+            details: {
+              subscription_uuid: fallbackSubscriptionId,
+              cancel_at: cancellationDate,
+              refund_type: 'prorated',
+            },
+            effective_date: cancellationDate,
+            requires_review: false,
+            risk_level: 'medium',
+          })
+        );
+      }
+
+      const transitionSubscriptions = Array.isArray(opportunity.billing_transition?.subscriptions_to_cancel)
+        ? opportunity.billing_transition.subscriptions_to_cancel
+        : [];
+      for (const subscriptionId of transitionSubscriptions) {
+        if (typeof subscriptionId !== 'string' || !subscriptionId || cancelledSubscriptionIds.has(subscriptionId)) {
+          continue;
+        }
+        cancelledSubscriptionIds.add(subscriptionId);
+        actions.push(
+          applyRisk({
+            type: 'cancel_subscription',
+            description: `Cancel self-service subscription ${subscriptionId}`,
+            details: {
+              subscription_uuid: subscriptionId,
+              cancel_at: cancellationDate,
+              refund_type: 'prorated',
+            },
+            effective_date: cancellationDate,
+            requires_review: false,
+            risk_level: 'medium',
+          })
+        );
+      }
+
+      const existingSubscriptions = Array.isArray(opportunity.existing_self_service?.subscriptions)
+        ? opportunity.existing_self_service.subscriptions
+        : [];
+      for (const subscription of existingSubscriptions) {
+        const subscriptionId = subscription?.subscription_id;
+        if (typeof subscriptionId !== 'string' || !subscriptionId || cancelledSubscriptionIds.has(subscriptionId)) {
+          continue;
+        }
+        cancelledSubscriptionIds.add(subscriptionId);
+        actions.push(
+          applyRisk({
+            type: 'cancel_subscription',
+            description: `Cancel self-service subscription ${subscription.plan_code || subscriptionId}`,
+            details: {
+              subscription_uuid: subscriptionId,
+              cancel_at: cancellationDate,
+              refund_type: 'prorated',
+            },
+            effective_date: cancellationDate,
             requires_review: false,
             risk_level: 'medium',
           })
@@ -193,7 +261,10 @@ export class BillingEngine {
   private getContractMonths(startDate: string, endDate: string): number {
     const start = this.parseDateParts(startDate);
     const end = this.parseDateParts(endDate);
-    return (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+    const monthDiff =
+      (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+    const alignedBillingCycles = monthDiff + (end.getDate() >= start.getDate() ? 1 : 0);
+    return Math.max(1, alignedBillingCycles);
   }
 
   private parseDateParts(value: string): Date {

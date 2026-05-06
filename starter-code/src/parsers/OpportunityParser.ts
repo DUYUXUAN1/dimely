@@ -75,9 +75,10 @@ const OpportunitySchema = z.object({
 function getContractMonths(startDate: string, endDate: string): number {
   const start = parseDateParts(startDate);
   const end = parseDateParts(endDate);
-  const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
-  // Add 1 because contract includes both start and end months
-  return months + 1;
+  const monthDiff =
+    (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+  const alignedBillingCycles = monthDiff + (end.getDate() >= start.getDate() ? 1 : 0);
+  return Math.max(1, alignedBillingCycles);
 }
 
 function parseDateParts(value: string): Date {
